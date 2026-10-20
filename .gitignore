@@ -1,0 +1,37 @@
+# Godot generated cache; keep source .uid and import settings
+.godot/
+**/.godot/
+
+# Exported builds and runtime binaries
+/build/
+/dist/
+/exports/
+/runtime/
+/runtimes/
+*.exe
+*.pck
+*.dmg
+*.apk
+*.aab
+
+# Local editor, temporary data and logs
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+__pycache__/
+*.pyc
+
+# Player profiles and local secrets
+.env
+.env.*
+!.env.example
+ember_save.json
+linchuan_preview_v2.json
+linchuan_preview_v2.json.*
+/user-data/
+
+# Full checkpoints are recovery archives, not source imports
+linchuan-polish-checkpoint*.zip
+linchuan-preview-source*.zip
+godot452-runtime*.tar.gz
