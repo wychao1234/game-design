@@ -51,6 +51,19 @@ alpha阈值严格大于80。`foot_x`取最低16源像素鞋底带的左右边界
 
 ## 尚需验收
 
+### 迁移后的复现入口（2026-10-21）
+
+运行时不随 Git 仓库提交，验证脚本不能假定它位于仓库内。明确传入固定 Godot 4.5.2 引擎；录制还需显式提供 Python 离屏启动器：
+
+```sh
+python3 tests/run_shen_visual.py --engine /absolute/path/to/Godot --out /absolute/path/to/headless-review
+python3 tests/run_shen_visual.py --engine /absolute/path/to/Godot --offscreen /absolute/path/to/run_offscreen.py --movie --out /absolute/path/to/movie-review
+python3 tests/run_shen_visual.py --engine /absolute/path/to/Godot --fixture feedback --out /absolute/path/to/feedback-check
+python3 tests/migration_tools_checks.py
+```
+
+以上命令从工程目录运行；脚本路径也可改为绝对路径，从任意目录启动。`--engine` 始终必需，`--movie` 时 `--offscreen` 必需。输出仍使用临时隔离存档；固定步长录像不代表实时帧率，无头通过也不代表动作美术通过。已有历史证据保留其原始命令，不重写为本轮运行记录。
+
 - 游戏内同镜头对比walk与attack的体型、脚锚、方向及回位。
 - 特别检查正面0/1→2/3、右向12/13→14/15的大重心变化是否导致整人横跳。
 - 单次攻击、连续点击与移动攻击的真实接触时刻，保持当前伤害规则。

@@ -19,7 +19,7 @@ def main():
     parser.add_argument('--offscreen', type=Path,
                         help='Python offscreen launcher; required with --movie')
     parser.add_argument('--movie', action='store_true')
-    parser.add_argument('--fixture', choices=['body', 'feedback'], default='body')
+    parser.add_argument('--fixture', choices=['body', 'feedback', 'recovery', 'front_candidate'], default='body')
     parser.add_argument('--fps', type=int, default=40)
     parser.add_argument('--out', type=Path)
     args = parser.parse_args()
@@ -31,8 +31,11 @@ def main():
     if args.fps <= 0:
         parser.error('--fps must be positive')
     project = Path(__file__).resolve().parents[1]
-    fixture = 'shen_attack_visual_review.gd' if args.fixture=='body' else 'combat_feedback_visual_review.gd'
-    expected_actions = 10 if args.fixture=='body' else 4
+    fixture = {'body': 'shen_attack_visual_review.gd',
+               'feedback': 'combat_feedback_visual_review.gd',
+               'recovery': 'recovery_visual_review.gd',
+               'front_candidate': 'front_candidate_visual_review.gd'}[args.fixture]
+    expected_actions = {'body': 10, 'feedback': 4, 'recovery': 3, 'front_candidate': 3}[args.fixture]
     movie_name = 'shen-attack.avi' if args.fixture=='body' else 'feedback.avi'
     output = (args.out or project / ('tests/preview_evidence/visual-v3/attack-motion' if args.fixture=='body' else 'tests/preview_evidence/visual-v3/feedback-short-restored')).resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -41,11 +44,14 @@ def main():
                'assets/characters/shen.png', 'assets/characters/shen_attack.png',
                'assets/characters/shen_attack.json', 'tests/shen_attack_visual_review.gd']
     sources.append('tests/'+fixture)
+    sources.append('tests/recovery_visual_review.gd')
+    if args.fixture == 'front_candidate':
+        sources.append('../docs/candidates/shen-front-recovery-v2/front-recovery-v2.png')
     hashes = {p: hashlib.sha256((project / p).read_bytes()).hexdigest()
               for p in sources if (project / p).is_file()}
-    for directory in [project/'scripts', project/'assets/environment']:
+    for directory in [project/'scripts', project/'assets/environment', project/'assets/characters']:
         for path in directory.rglob('*'):
-            if path.is_file() and path.suffix in ['.gd', '.gdshader', '.png', '.import']:
+            if path.is_file() and path.suffix in ['.gd', '.gdshader', '.png', '.import', '.json']:
                 hashes[str(path.relative_to(project))] = hashlib.sha256(path.read_bytes()).hexdigest()
     with tempfile.TemporaryDirectory(prefix='linchuan-preview-qa-') as temp:
         env = os.environ.copy()

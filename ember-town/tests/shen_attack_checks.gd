@@ -50,6 +50,64 @@ func _run() -> void:
 	await physics_frame
 	check(game._prepare_shen_attack_atlas(),"valid authored atlas loads")
 	check(game._shen_attack_frames.size()==16,"four directions each have four attack phases")
+	var base_texture: Texture2D = load("res://assets/characters/shen_attack.png") as Texture2D
+	var recovery_metadata: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/shen_attack_recovery_overrides.json")) as Dictionary
+	var front_metadata: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/shen_attack_front_recovery_v2.json")) as Dictionary
+	var recovery_image: Texture2D
+	var front_image: Texture2D
+	for index: int in range(16):
+		var texture: AtlasTexture = game._shen_attack_frames[index] as AtlasTexture
+		if index==14:
+			check(texture.atlas!=base_texture,"recovery "+str(index)+" uses isolated source")
+			if recovery_image==null: recovery_image = texture.atlas
+			check(texture.atlas==recovery_image,"accepted recovery uses the normalized source")
+		elif index==2:
+			front_image = texture.atlas
+			check(front_image!=base_texture,"front recovery uses its independently approved v2 source")
+		else: check(texture.atlas==base_texture,"unchanged source frame "+str(index))
+	var expected_size: int = roundi(1254.0*269.0/float(recovery_metadata["global_body_height_pixels"]))
+	check(recovery_image!=null and recovery_image.get_width()==expected_size and recovery_image.get_height()==expected_size,"one shared body calibration normalizes the entire source")
+	var pose_metadata: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/shen_attack.json")) as Dictionary
+	var expected_front_size: Vector2i = Vector2i(roundi(1314.0*269.0/965.0),roundi(1197.0*269.0/965.0))
+	check(front_image!=null and front_image!=recovery_image and front_image.get_size()==Vector2(expected_front_size),"front source normalization matches its isolated GPU fixture")
+	for source_metadata: Dictionary in [recovery_metadata,front_metadata]:
+		for record: Dictionary in source_metadata["frames"]:
+			var index: int = int(record["index"])
+			var atlas: AtlasTexture = game._shen_attack_frames[index] as AtlasTexture
+			var source_size: Array = source_metadata["image_size"]
+			var ratio: Vector2 = atlas.atlas.get_size()/Vector2(float(source_size[0]),float(source_size[1]))
+			var region: Array = record["region"]
+			var actual: Vector2 = game._shen_attack_offsets[index]
+			check(absf((float(region[3])*ratio.y-float(record["foot_y"])*ratio.y+actual.y)*game._shen_attack_pixel_size)<0.00001,"replacement "+str(index)+" soles stay on common ground")
+			var row: int = index/4
+			var support: float = (float((pose_metadata["reference_walk_support_x_by_row"] as Array)[row])+(game._role_offsets["shen"][row*4] as Vector2).x)*float(game._role_sizes["shen"])
+			check(absf((float(record["foot_x"])*ratio.x+actual.x)*game._shen_attack_pixel_size-support)<0.00001,"replacement "+str(index)+" shares the walk support anchor")
+	var fallback_path: String = "user://linchuan_shen_bad_recovery_test.json"
+	var preserved_frames: Array[Texture2D] = game._shen_attack_frames.duplicate()
+	var preserved_offsets: Array[Vector2] = game._shen_attack_offsets.duplicate()
+	for defect: String in ["region","rejected_front","body_height"]:
+		var invalid: Dictionary = recovery_metadata.duplicate(true)
+		if defect=="region": (invalid["frames"] as Array)[0]["region"] = [1200,1200,400,400]
+		elif defect=="rejected_front": (invalid["frames"] as Array)[0]["index"] = 2
+		else: invalid["global_body_height_pixels"] = 0
+		var invalid_file: FileAccess = FileAccess.open(fallback_path,FileAccess.WRITE)
+		invalid_file.store_string(JSON.stringify(invalid))
+		invalid_file.close()
+		check(not game._apply_shen_recovery_overrides(pose_metadata,fallback_path),"invalid optional recovery "+defect+" rejects")
+		check(game._shen_attack_frames==preserved_frames and game._shen_attack_offsets==preserved_offsets,"invalid recovery "+defect+" applies neither partial replacement")
+	var wrong_front: Dictionary = front_metadata.duplicate(true)
+	(wrong_front["frames"] as Array)[0]["index"] = 14
+	var wrong_file: FileAccess = FileAccess.open(fallback_path,FileAccess.WRITE)
+	wrong_file.store_string(JSON.stringify(wrong_front))
+	wrong_file.close()
+	check(not game._apply_shen_recovery_overrides(pose_metadata,fallback_path),"front source may not overwrite the accepted right recovery")
+	check(game._shen_attack_frames==preserved_frames and game._shen_attack_offsets==preserved_offsets,"source-index mismatch preserves both accepted recoveries")
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(fallback_path))
+	check(game._apply_shen_recovery_overrides(pose_metadata),"valid optional recovery can reapply")
+	check(game._shen_attack_offsets==preserved_offsets and game._shen_attack_frames[2]==preserved_frames[2],"right source reapply is idempotent and does not alter front")
+	var right_before: Texture2D = game._shen_attack_frames[14]
+	check(game._apply_shen_recovery_overrides(pose_metadata,"res://assets/characters/shen_attack_front_recovery_v2.json"),"valid approved front source can reapply")
+	check(game._shen_attack_offsets==preserved_offsets and game._shen_attack_frames[14]==right_before,"front source reapply is idempotent and does not alter right")
 	var walk_scale: float = game.body.pixel_size
 	var metadata: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/characters/shen_attack.json")) as Dictionary
 	var hp: float = float(game.enemies[0]["hp"])

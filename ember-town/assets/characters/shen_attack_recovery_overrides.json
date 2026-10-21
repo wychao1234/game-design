@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "image": "shen_attack_recovery_overrides.png",
+  "sha256": "dda41b3103c8d0f9a2daff8b23c7350e86b4050195d6f9156f90ed5080dfe190",
+  "image_size": [
+    1254,
+    1254
+  ],
+  "status": "right14: accepted as local dynamic repair in independent review; front2: rejected and disabled; overall art acceptance still failed",
+  "global_body_height_pixels": 311.0,
+  "calibration_method": "Median of two actual head-to-boot heights: front321/right301. Both sword tips are above boot soles; weapons do not determine this height. Normalize the entire source once by production269/source311 using nearest sampling. Never choose a separate scale for either pose. Foot anchors are alpha>80 bottom16px sole-band midpoints. Retain the already-reviewed common311 calibration for the accepted right14; disabling the front pose must not silently enlarge the right pose.",
+  "replacement_indices": [
+    14
+  ],
+  "frames": [
+    {
+      "index": 14,
+      "direction": "right",
+      "stage": "recovery",
+      "region": [
+        620,
+        850,
+        430,
+        400
+      ],
+      "foot_x": 203.0,
+      "foot_y": 347,
+      "body_height_pixels": 301,
+      "foot_support_bbox": [
+        65,
+        331,
+        276,
+        16
+      ]
+    }
+  ],
+  "production_unchanged": {
+    "shen_attack.png": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe",
+    "shen_attack.json": "57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959"
+  },
+  "known_limits": [
+    "Only right14 has passed the local dynamic review; this is not approval of the full animation or overall game visuals.",
+    "Rejected front2 remains in the source PNG for provenance but has no runtime frame mapping.",
+    "Front1→2 still uses the original production pose and remains an open animation defect."
+  ],
+  "dynamic_review": {
+    "date": "2026-10-21",
+    "right14": "Accepted locally: maintains back-side torso/shoulder orientation through recovery.",
+    "front2": "Rejected: face/hair pixel clusters drift; bright round screen-left shoulder makes the upper body look replaced. Original production frame2 retained."
+  },
+  "excluded_frames": [
+    {
+      "index": 2,
+      "direction": "front",
+      "stage": "recovery",
+      "region": [
+        686,
+        0,
+        313,
+        440
+      ],
+      "foot_x": 89.5,
+      "foot_y": 396,
+      "body_height_pixels": 321,
+      "foot_support_bbox": [
+        63,
+        380,
+        53,
+        16
+      ],
+      "rejection": "Rejected: face/hair pixel clusters drift; bright round screen-left shoulder makes the upper body look replaced. Original production frame2 retained."
+    }
+  ]
+}

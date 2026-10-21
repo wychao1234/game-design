@@ -51,6 +51,8 @@ void fragment(){
  float hy=dot(texture(albedo_tex,wooduv+vec2(0,delta.y)).rgb,vec3(0.333))-h;
  float ripple=noise(p*vec2(8.0,3.4));
  float ripple2=noise(p*vec2(5.7,8.9)+vec2(43.1,17.3));
- NORMAL_MAP=vec3(0.5+hy*0.7+(ripple-0.5)*0.19,0.5+hx*0.7+(ripple2-0.5)*0.19,1.0);
+ // Standing water fills the fine grain; retain relief on dry boards, not inside puddle cores.
+ float relief=mix(1.0,0.16,wet);
+ NORMAL_MAP=vec3(0.5+(hy*0.7+(ripple-0.5)*0.19)*relief,0.5+(hx*0.7+(ripple2-0.5)*0.19)*relief,1.0);
  NORMAL_MAP_DEPTH=0.65;
 }

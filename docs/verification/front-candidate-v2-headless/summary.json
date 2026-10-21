@@ -1,0 +1,12 @@
+{
+  "mode": "headless isolated front candidate; not GPU or art approval",
+  "returncode": 0,
+  "engine_errors": [],
+  "actions": 3,
+  "failures": [],
+  "scenery_valid": true,
+  "candidate_loading_evidence": "actions-candidate.json",
+  "candidate_sha256": "faf497af69be46f2a6067326b4d376e9047b7a5f3dde30e31edcfc5415000f7e",
+  "fixture_sha256": "8bb239e92842cca27dd86f6e5f6d48f72ffc0cc78333a28c52a99b1e982c470a",
+  "valid": true
+}
