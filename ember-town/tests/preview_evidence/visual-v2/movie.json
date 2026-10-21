@@ -1,0 +1,11 @@
+{
+  "file": "linchuan-visual-v2.mp4",
+  "sha256": "acf89a0b75765c08cf8f55876070bb52bf49cd3eea582dc44c42c5e83304f6cf",
+  "width": 1440,
+  "height": 810,
+  "frames": 161,
+  "fps": 20,
+  "duration_seconds": 8.05,
+  "method": "Godot Movie Maker fixed simulation step; software Vulkan; not real-time target GPU performance",
+  "windows_execution_verified": false
+}

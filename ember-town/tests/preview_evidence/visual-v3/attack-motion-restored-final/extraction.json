@@ -1,0 +1,321 @@
+{
+  "method": "Unscaled native crops from actual movie. Logical viewport points mapped to recorded image dimensions before cropping. Labelled strip; original full contact frames retained.",
+  "logical_viewport": [
+    1600,
+    900
+  ],
+  "selections": [
+    {
+      "segment": "front_basic",
+      "phase": "idle-before",
+      "state_index": 7,
+      "video_frame": 8,
+      "simulation_time": 0.2,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "front_basic",
+      "phase": "pose-0",
+      "state_index": 10,
+      "video_frame": 11,
+      "simulation_time": 0.275,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "front_basic",
+      "phase": "pose-1",
+      "state_index": 13,
+      "video_frame": 14,
+      "simulation_time": 0.35,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "front_basic",
+      "phase": "pose-2",
+      "state_index": 16,
+      "video_frame": 17,
+      "simulation_time": 0.425,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "front_basic",
+      "phase": "pose-3",
+      "state_index": 19,
+      "video_frame": 20,
+      "simulation_time": 0.5,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "front_basic",
+      "phase": "idle-after",
+      "state_index": 23,
+      "video_frame": 24,
+      "simulation_time": 0.6,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "idle-before",
+      "state_index": 47,
+      "video_frame": 48,
+      "simulation_time": 1.2,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "pose-0",
+      "state_index": 50,
+      "video_frame": 51,
+      "simulation_time": 1.275,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "pose-1",
+      "state_index": 53,
+      "video_frame": 54,
+      "simulation_time": 1.35,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "pose-2",
+      "state_index": 56,
+      "video_frame": 57,
+      "simulation_time": 1.425,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "pose-3",
+      "state_index": 59,
+      "video_frame": 60,
+      "simulation_time": 1.5,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "back_basic",
+      "phase": "idle-after",
+      "state_index": 63,
+      "video_frame": 64,
+      "simulation_time": 1.6,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "idle-before",
+      "state_index": 87,
+      "video_frame": 88,
+      "simulation_time": 2.2,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "pose-0",
+      "state_index": 90,
+      "video_frame": 91,
+      "simulation_time": 2.275,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "pose-1",
+      "state_index": 93,
+      "video_frame": 94,
+      "simulation_time": 2.35,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "pose-2",
+      "state_index": 96,
+      "video_frame": 97,
+      "simulation_time": 2.425,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "pose-3",
+      "state_index": 99,
+      "video_frame": 100,
+      "simulation_time": 2.5,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "left_basic",
+      "phase": "idle-after",
+      "state_index": 103,
+      "video_frame": 104,
+      "simulation_time": 2.59999999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "idle-before",
+      "state_index": 127,
+      "video_frame": 128,
+      "simulation_time": 3.19999999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "pose-0",
+      "state_index": 130,
+      "video_frame": 131,
+      "simulation_time": 3.27499999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "pose-1",
+      "state_index": 133,
+      "video_frame": 134,
+      "simulation_time": 3.34999999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "pose-2",
+      "state_index": 136,
+      "video_frame": 137,
+      "simulation_time": 3.42499999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "pose-3",
+      "state_index": 139,
+      "video_frame": 140,
+      "simulation_time": 3.49999999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    },
+    {
+      "segment": "right_basic",
+      "phase": "idle-after",
+      "state_index": 143,
+      "video_frame": 144,
+      "simulation_time": 3.59999999999999,
+      "native_crop": [
+        556,
+        305,
+        886,
+        555
+      ]
+    }
+  ]
+}

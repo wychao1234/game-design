@@ -1,0 +1,158 @@
+extends SceneTree
+
+# Internal fixed-pose review through production combat actions, not a normal player run.
+var game: Node3D
+var clock: float = 0.0
+var segment: int = -1
+var fired: Array[float] = []
+var events: Array[Dictionary] = []
+var frames: Array[Dictionary] = []
+var output: String = ""
+var review_label: Label
+var ready_to_run: bool = false
+var quitting: bool = false
+var scenery_evidence: Dictionary = {}
+const NAMES: Array[String] = ["front_basic", "back_basic", "left_basic", "right_basic", "front_Q", "back_E", "left_awakening", "right_three_basics"]
+
+func _initialize() -> void:
+	call_deferred("_setup")
+
+func _setup() -> void:
+	var profile: String = ""
+	for arg: String in OS.get_cmdline_user_args():
+		if arg.begins_with("--test-profile="): profile = arg.trim_prefix("--test-profile=")
+		if arg.begins_with("--review-json="): output = arg.trim_prefix("--review-json=")
+	if not profile.is_absolute_path() or not profile.contains("linchuan-preview-qa-") or not output.is_absolute_path():
+		push_error("Attack visual fixture requires isolated linchuan-preview-qa- save and absolute review-json")
+		quit(2)
+		return
+	game = load("res://adventure.tscn").instantiate()
+	root.add_child(game)
+	game.set_physics_process(false)
+	await process_frame
+	game.demo = false
+	var started: bool = game._start_stage("ferry", 0)
+	scenery_evidence = _inspect_scenery()
+	if not started or not bool(scenery_evidence.get("valid", false)):
+		var file: FileAccess = FileAccess.open(output, FileAccess.WRITE)
+		if file != null:
+			file.store_string(JSON.stringify({"failures":["Real ferry scenery is absent or incomplete"], "scenery":scenery_evidence}))
+		push_error("Attack visual fixture requires the real ferry scenery: " + JSON.stringify(scenery_evidence))
+		quit(2)
+		return
+	var layer: CanvasLayer = CanvasLayer.new()
+	root.add_child(layer)
+	review_label = Label.new()
+	review_label.position = Vector2(1010, 730)
+	review_label.add_theme_font_size_override("font_size", 16)
+	review_label.add_theme_color_override("font_color", Color.WHITE)
+	if game.font != null: review_label.add_theme_font_override("font", game.font)
+	layer.add_child(review_label)
+	ready_to_run = true
+
+func _inspect_scenery() -> Dictionary:
+	var evidence: Dictionary = {"valid":false, "meshes":0, "multimeshes":0, "batch_instances":0, "environments":0, "lights":0}
+	if not is_instance_valid(game.scenery): return evidence
+	var viewport_size: Vector2 = game.camera.get_viewport().get_visible_rect().size
+	evidence["viewport_size"] = [viewport_size.x,viewport_size.y]
+	evidence["mode"] = str(game.scenery.mode)
+	evidence["path"] = str(game.scenery.get_path())
+	var pending: Array[Node] = []
+	pending.append(game.scenery)
+	while not pending.is_empty():
+		var node: Node = pending.pop_back()
+		if node is MeshInstance3D and (node as MeshInstance3D).mesh != null and (node as MeshInstance3D).is_visible_in_tree(): evidence.meshes += 1
+		if node is MultiMeshInstance3D:
+			var batch: MultiMeshInstance3D = node as MultiMeshInstance3D
+			if batch.multimesh != null and batch.multimesh.mesh != null and batch.is_visible_in_tree():
+				evidence.multimeshes += 1
+				evidence.batch_instances += batch.multimesh.instance_count if batch.multimesh.visible_instance_count<0 else batch.multimesh.visible_instance_count
+		if node is WorldEnvironment and (node as WorldEnvironment).environment != null: evidence.environments += 1
+		if node is Light3D: evidence.lights += 1
+		for child: Node in node.get_children(): pending.append(child)
+	evidence.valid = str(game.area)=="ferry" and str(game.scenery.mode)=="ferry" and int(evidence.meshes)+int(evidence.batch_instances)>10 and int(evidence.environments)>0 and int(evidence.lights)>0
+	return evidence
+
+func _process(delta: float) -> bool:
+	if not ready_to_run or quitting: return false
+	var desired: int = mini(7, int(clock))
+	if desired != segment:
+		segment = desired
+		_prepare_segment()
+	game.combat_step(delta, false)
+	clock += delta
+	var local: float = clock - float(segment)
+	var timings: Array[float] = [0.25]
+	if segment == 7: timings.assign([0.25, 0.65, 1.05])
+	for timing: float in timings:
+		if local >= timing and timing not in fired:
+			fired.append(timing)
+			_fire_action()
+	game._update_preview_ui()
+	var pose_column: int = _column()
+	review_label.text = "INTERNAL ACTION REVIEW\n%s  t=%.3f\nrow=%d col=%d" % [NAMES[segment], clock, game._shen_pose_row, pose_column]
+	var ground: Vector2 = game.camera.unproject_position(game.hero.global_position)
+	frames.append({"time":clock,"segment":NAMES[segment],"pose_row":game._shen_pose_row,"pose_column":pose_column,"pixel_size":game.body.pixel_size,"offset":[game.body.offset.x,game.body.offset.y],"hero":[game.hero.position.x,game.hero.position.z],"hero_ground_screen":[ground.x,ground.y],"target_hp":game.enemies[0].hp})
+	if clock >= 9.1:
+		quitting = true
+		call_deferred("_finish")
+	return false
+
+func _prepare_segment() -> void:
+	fired.clear()
+	var party: Array[String] = ["shen", "jiang", "zhu"]
+	game.combat_begin(party, "ferry", 0)
+	game.hero.position = Vector3(0, 0, 1)
+	var row: int = segment if segment < 4 else (0 if segment == 4 else (1 if segment == 5 else (2 if segment == 6 else 3)))
+	var right: Vector3 = game.camera.global_basis.x
+	var back: Vector3 = game.camera.global_basis.z
+	right.y = 0.0
+	back.y = 0.0
+	game.aim = [back.normalized(), -back.normalized(), -right.normalized(), right.normalized()][row]
+	for enemy: Dictionary in game.enemies:
+		enemy.node.position = Vector3(20, 0, 20)
+		enemy.stun = 999.0
+		enemy.cd = 999.0
+		enemy.hp = 100000.0
+		enemy.max_hp = 100000.0
+	var target: Dictionary = game.enemies[0]
+	target.node.position = game.hero.position + game.aim * (3.5 if segment == 5 else 1.6)
+	game._update_role_visual(Vector3.ZERO)
+
+func _column() -> int:
+	if game._shen_pose_time <= 0.0: return -1
+	return clampi(floori((1.0 - game._shen_pose_time / game.SHEN_ATTACK_POSE_DURATION) * 4.0), 0, 3)
+
+func _fire_action() -> void:
+	var target: Dictionary = game.enemies[0]
+	var previous_hp: float = target.hp
+	var before: float = game.elapsed
+	var action: String = "basic"
+	if segment == 4:
+		action = "Q"
+		game.use_skill(0)
+	elif segment == 5:
+		action = "E"
+		game.use_skill(1)
+	elif segment == 6:
+		action = "awakening"
+		game.awakening_energy = 100.0
+		game.use_awakening()
+	else: game.use_basic()
+	events.append({"time":clock,"simulation_seconds_before":before,"simulation_seconds_after":game.elapsed,"segment":NAMES[segment],"action":action,"pose_row":game._shen_pose_row,"pose_column":_column(),"damage":previous_hp-float(target.hp),"aim":[game.aim.x,game.aim.z],"hero":[game.hero.position.x,game.hero.position.z],"target":[target.node.position.x,target.node.position.z]})
+	print("ATTACK_VISUAL_ACTION ", JSON.stringify(events[-1]))
+
+func _finish() -> void:
+	var failures: Array[String] = []
+	if events.size()!=10: failures.append("Expected ten actual actions")
+	for event: Dictionary in events:
+		if float(event.damage) <= 0.0 or int(event.pose_column) != 0 or event.simulation_seconds_before != event.simulation_seconds_after:
+			failures.append(str(event.segment) + " did not hit instantly in contact column zero")
+	var file: FileAccess = FileAccess.open(output, FileAccess.WRITE)
+	file.store_string(JSON.stringify({"scope":"Internal production-action fixed fixture with held enemies; not a full player run or performance test","duration":clock,"scenery":scenery_evidence,"actions":events,"frame_states":frames,"failures":failures}))
+	file.close()
+	print("ATTACK_VISUAL_REVIEW ", JSON.stringify({"actions":events.size(),"failures":failures}))
+	game.combat_clear()
+	game.queue_free()
+	await process_frame
+	quit(0 if failures.is_empty() else 2)

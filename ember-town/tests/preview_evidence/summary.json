@@ -1,0 +1,250 @@
+{
+  "scope": "Native Godot production-action and isolated persistence checks; no Windows execution or GPU performance claim",
+  "completed_utc": "2026-10-16T11:41:11.265190+00:00",
+  "source_sha256": {
+    "scripts/adventure.gd": "97f5cc3ddd97980b6f7b6ce4996fee898e973951c9e9979558ec9c7b8223efb8",
+    "scripts/adventure_combat.gd": "77a0c6784eb1daa9bec9be7d51ddf2922cf3c40d3c103aa9894c30b5ff9e9db2",
+    "scripts/adventure_hud.gd": "b7be53f81ccfd553473e0ed4f05ceafa374c7b9f3ea5182fc2f66961f60211ee",
+    "scripts/adventure_progress.gd": "ceb9d5c2e767949c53fba4cd3c4178ecd781a5a405e2b3acd4ec4fafa9f643c5",
+    "scripts/game.gd": "b3fc66156ef8a0cff5169a88c4ac175932403759e926442d3df04fbd68cf3305",
+    "scripts/room.gd": "03b802ee64988add73c9ff9b437098f93d55943a4ec28c83bc3f493eab27c72f",
+    "scripts/waterfront.gd": "451dd858c0965d70793f616256313817a113f1b24f281f4a2b4492fa782b9d8c"
+  },
+  "results": [
+    {
+      "stage": "version",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.034,
+      "passed": true,
+      "engine_error": false,
+      "details": null
+    },
+    {
+      "stage": "import",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--editor",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--quit"
+      ],
+      "exit_code": 0,
+      "seconds": 10.428,
+      "passed": true,
+      "engine_error": false,
+      "details": null
+    },
+    {
+      "stage": "progress",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=progress",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/progress.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.683,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "progress",
+        "checks": 25,
+        "failures": []
+      }
+    },
+    {
+      "stage": "save-write",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=save-write",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/persistence.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.326,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "save-write",
+        "checks": 3,
+        "failures": []
+      }
+    },
+    {
+      "stage": "save-read",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=save-read",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/persistence.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.431,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "save-read",
+        "checks": 3,
+        "failures": []
+      }
+    },
+    {
+      "stage": "recover-main",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=recover-main",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/persistence.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.443,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "recover-main",
+        "checks": 3,
+        "failures": []
+      }
+    },
+    {
+      "stage": "protect-corrupt",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=protect-corrupt",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/protect-corrupt.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.428,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "protect-corrupt",
+        "checks": 2,
+        "failures": []
+      }
+    },
+    {
+      "stage": "combat",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=combat",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/combat.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.195,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "combat",
+        "checks": 66,
+        "failures": []
+      }
+    },
+    {
+      "stage": "effects",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=effects",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/effects.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.299,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "effects",
+        "checks": 15,
+        "failures": []
+      }
+    },
+    {
+      "stage": "collision",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=collision",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/collision.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.894,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "collision",
+        "checks": 4,
+        "failures": []
+      }
+    },
+    {
+      "stage": "integration",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=integration",
+        "--test-profile=/tmp/linchuan-preview-qa-l6vqwy7k/integration.json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.277,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "integration",
+        "checks": 30,
+        "failures": []
+      }
+    }
+  ]
+}

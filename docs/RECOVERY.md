@@ -2,7 +2,7 @@
 
 更新：2026-10-21（Asia/Shanghai）。
 
-**当前阻塞：没有可用的本地执行环境，尚未解压/迁入游戏源码。** 此文记录已有保存点，不代表这些二进制文件已经在仓库。不要用旧源码包代替最新精修。
+**本轮已恢复执行环境、校验并导入 v4 源码，工程位于 `ember-town/`。** 原归档仍用于灾后恢复；正常开发以 Git 提交与 PR 为准。导入清单见 [SOURCE_IMPORT.json](SOURCE_IMPORT.json)，本轮测试见 [验证记录](verification/2026-10-21-import/README.md)。不得用旧 v2 替代最新精修。
 
 ## 最近检查点
 
@@ -20,7 +20,7 @@
 
 ## 已记录的 SHA-256
 
-下列哈希来自此前验证记录。本轮未重新解压，恢复后必须比对实际字节。整个 v4 ZIP 的 SHA 尚未在此记录，不能用成员哈希冒充整包哈希。
+本轮已校验 v4 ZIP CRC、340 个归档成员及关键源码字节；完整迁入成员逐项校验。v4 ZIP SHA-256 为 `76665b1ac2ba51dac7ee430f1e61bfe63d69bd86cd7d8b7c59238ce75981526b`。下表为恢复基准哈希，后续精修文件会另有新提交，不能把恢复哈希当作永远不变的当前 SHA。
 
 | 文件/成员 | SHA-256 |
 | --- | --- |
@@ -30,7 +30,7 @@
 | ember-town/scripts/adventure.gd | 9eb99b345e933fcc729911f36033a4cf1fbc440e7078091acfe0a3640e538b14 |
 | ember-town/scripts/adventure_combat.gd | 0039ef7d7349f980833a333d50727b640477b264219018a51e6e8d51ce321298 |
 | ember-town/scripts/waterfront.gd | c4ea3e95ba8a3db0945084e31d3a44f1142c0b0c4b43530006c2175d2329486f |
-| wetwood shader，实际路径恢复时查清 | 6f729671220fcf59ca748028d6fb6e41fc652b7fea1d907d7ec55c9e6291c3b5 |
+| ember-town/assets/environment/waterfront_wetwood.gdshader | 6f729671220fcf59ca748028d6fb6e41fc652b7fea1d907d7ec55c9e6291c3b5 |
 | 生产 shen_attack.png | fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe |
 | 生产 shen_attack JSON | 57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959 |
 | 已拒绝 candidate2 PNG | f3d89c59adf160cfac85f14c2cd4dd5862190baeaa58955f1adee945460bcf92 |
@@ -64,3 +64,7 @@
 生产攻击图仍有正面与右向收招缺陷。candidate2 即使与 v4 一起保存，也不是生产资产。独立 overrides 只覆盖前向 recovery frame2 与右向 recovery frame14；需核实源尺寸、脚点、统一人体尺度、metadata，再做正常速度和原生帧评审。
 
 图集 16 帧并非可任意等宽等高分格。不能对整套正确 14 帧重新生成，不按含武器包围盒逐帧缩放，不滑动整个人遮盖姿态断裂。未完成上述验证前，不替换生产映射。
+
+## 2026-10-21 本轮迁移
+
+已恢复 4.5.2 固定运行链，并本轮实际完成预览 11 阶段和旧矿洞 9 阶段检查，Forward+ 渡口基准帧写出成功；这不构成整体美术通过。归档中大量隐藏日志暂存副本与重复 AVI 被排除，拒绝的收招候选没有迁入生产。已有原始设计文档含旧矿洞状态，均按历史记录解释，以根工作总账为准。

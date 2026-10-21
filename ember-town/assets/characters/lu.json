@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "image": "lu.png",
+  "image_size": [
+    1254,
+    1254
+  ],
+  "grid": [
+    4,
+    4
+  ],
+  "cell_width": 313.5,
+  "cell_height": 313.5,
+  "cell_size_is_nominal": true,
+  "row_edges": [
+    0,
+    315,
+    624,
+    925,
+    1254
+  ],
+  "column_edges_by_row": [
+    [
+      0,
+      327,
+      632,
+      936,
+      1254
+    ],
+    [
+      0,
+      312,
+      621,
+      926,
+      1254
+    ],
+    [
+      0,
+      316,
+      625,
+      931,
+      1254
+    ],
+    [
+      0,
+      324,
+      632,
+      938,
+      1254
+    ]
+  ],
+  "alpha_threshold": 80,
+  "row_directions": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
+  "animation": "walk",
+  "frame_count": 16,
+  "unique_source_frames": 16,
+  "recommended_fps": 8,
+  "foot_rule": "Alpha>80 bbox horizontal center and exclusive bottom, cell-local. Exact region overrides nominal grid. Original PNG pixels unchanged.",
+  "sha256": "67ba70060cc8650def101fa32070909e3a66640cf5d5b776362fbf3045de1946",
+  "max_subject_height": 291,
+  "row_max_subject_height": [
+    287,
+    291,
+    278,
+    281
+  ],
+  "excluded_sources": [],
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "direction": "front",
+      "region": [
+        0,
+        0,
+        327,
+        315
+      ],
+      "bbox": [
+        119,
+        19,
+        142,
+        287
+      ],
+      "foot_x": 190.0,
+      "foot_y": 306,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "direction": "front",
+      "region": [
+        327,
+        0,
+        305,
+        315
+      ],
+      "bbox": [
+        86,
+        19,
+        144,
+        287
+      ],
+      "foot_x": 158.0,
+      "foot_y": 306,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "direction": "front",
+      "region": [
+        632,
+        0,
+        304,
+        315
+      ],
+      "bbox": [
+        81,
+        19,
+        147,
+        287
+      ],
+      "foot_x": 154.5,
+      "foot_y": 306,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "direction": "front",
+      "region": [
+        936,
+        0,
+        318,
+        315
+      ],
+      "bbox": [
+        77,
+        19,
+        149,
+        287
+      ],
+      "foot_x": 151.5,
+      "foot_y": 306,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "column": 0,
+      "direction": "back",
+      "region": [
+        0,
+        315,
+        312,
+        309
+      ],
+      "bbox": [
+        100,
+        10,
+        135,
+        290
+      ],
+      "foot_x": 167.5,
+      "foot_y": 300,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 1,
+      "direction": "back",
+      "region": [
+        312,
+        315,
+        309,
+        309
+      ],
+      "bbox": [
+        78,
+        9,
+        145,
+        291
+      ],
+      "foot_x": 150.5,
+      "foot_y": 300,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 2,
+      "direction": "back",
+      "region": [
+        621,
+        315,
+        305,
+        309
+      ],
+      "bbox": [
+        75,
+        9,
+        147,
+        291
+      ],
+      "foot_x": 148.5,
+      "foot_y": 300,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 3,
+      "direction": "back",
+      "region": [
+        926,
+        315,
+        328,
+        309
+      ],
+      "bbox": [
+        67,
+        9,
+        146,
+        291
+      ],
+      "foot_x": 140.0,
+      "foot_y": 300,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "column": 0,
+      "direction": "left",
+      "region": [
+        0,
+        624,
+        316,
+        301
+      ],
+      "bbox": [
+        80,
+        10,
+        166,
+        277
+      ],
+      "foot_x": 163.0,
+      "foot_y": 287,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "column": 1,
+      "direction": "left",
+      "region": [
+        316,
+        624,
+        309,
+        301
+      ],
+      "bbox": [
+        71,
+        10,
+        168,
+        278
+      ],
+      "foot_x": 155.0,
+      "foot_y": 288,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "column": 2,
+      "direction": "left",
+      "region": [
+        625,
+        624,
+        306,
+        301
+      ],
+      "bbox": [
+        71,
+        12,
+        169,
+        275
+      ],
+      "foot_x": 155.5,
+      "foot_y": 287,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "column": 3,
+      "direction": "left",
+      "region": [
+        931,
+        624,
+        323,
+        301
+      ],
+      "bbox": [
+        66,
+        10,
+        167,
+        277
+      ],
+      "foot_x": 149.5,
+      "foot_y": 287,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 12,
+      "row": 3,
+      "column": 0,
+      "direction": "right",
+      "region": [
+        0,
+        925,
+        324,
+        329
+      ],
+      "bbox": [
+        91,
+        14,
+        167,
+        281
+      ],
+      "foot_x": 174.5,
+      "foot_y": 295,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "column": 1,
+      "direction": "right",
+      "region": [
+        324,
+        925,
+        308,
+        329
+      ],
+      "bbox": [
+        67,
+        14,
+        169,
+        281
+      ],
+      "foot_x": 151.5,
+      "foot_y": 295,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "column": 2,
+      "direction": "right",
+      "region": [
+        632,
+        925,
+        306,
+        329
+      ],
+      "bbox": [
+        73,
+        18,
+        168,
+        277
+      ],
+      "foot_x": 157.0,
+      "foot_y": 295,
+      "touches_cell_boundary": false
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "column": 3,
+      "direction": "right",
+      "region": [
+        938,
+        925,
+        316,
+        329
+      ],
+      "bbox": [
+        66,
+        18,
+        171,
+        277
+      ],
+      "foot_x": 151.5,
+      "foot_y": 295,
+      "touches_cell_boundary": false
+    }
+  ]
+}

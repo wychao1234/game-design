@@ -1,0 +1,25 @@
+{
+  "sha256": "fd4505d24ea3f9a7e77c776191887e92febaaa49cb9280068b48a6d1c5ebea1d",
+  "bytes": 2255404,
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1440,
+        "height": 810,
+        "r_frame_rate": "40/1",
+        "nb_frames": "366"
+      },
+      {
+        "codec_name": "aac",
+        "r_frame_rate": "0/0",
+        "nb_frames": "430"
+      }
+    ],
+    "format": {
+      "duration": "9.150000"
+    }
+  },
+  "scope": "Internal fixed-step production-action recording, not full gameplay or measured user-GPU FPS"
+}

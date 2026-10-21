@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "generation_tool": "built-in image_gen",
+  "source_output": "exec-b7e05038-3c9c-4b00-9015-e1c20374d778.png",
+  "generation_prompt": "Edit/generate identity-preserved PRODUCTION PIXEL GAME ATTACK ATLAS from the supplied walking atlas REFERENCE. Keep this exact Shen Yan identity, same face and tied tousled black hair, navy short coat, ivory waist sash, rust red bandages on ANATOMICAL LEFT forearm, dark boots/trousers, one single-edged sword in ANATOMICAL RIGHT unbandaged hand. Same detailed crisp pixel clusters, dark outline, adult 3-head proportions and elevated game view. Make a NEW transparent square image EXACTLY4 COLUMNS4 ROWS=16 fullbody sprites. Row1 faces front/down, Row2 faces BACK/up, Row3 LEFT, Row4 RIGHT. Every row is ONE4-FRAME actual attack: column1 already CONTACT/IMPACT with deep balanced lunge, strong torso/hip twist and sword cutting through target direction; column2 follow-through with different shoulder/hip/knee pose and moving white sash; column3 recovery retracts sword/weight; column4 ready guard lowered sword. No windup or standing-first frame; animation starts at contact to match immediate damage. Whole-body mechanics must visibly change, not merely rotate sword. CRITICAL HANDEDNESS: sword ALWAYS in UNWRAPPED RIGHT hand. RED LEFT ARM NEVER GRIPS SWORD. In BACK row the sword hand is on SCREEN RIGHT side, while red-wrapped arm is on SCREEN LEFT; maintain this clearly for ALL FOUR back frames. In back contact frame right arm extends toward upper-right and red left arm balances toward lower-left; never move sword to red left arm. Front contact sword uses screen-left unwrapped right arm, red left arm balances screen-right. Side left/right views also keep unwrapped right sword hand and red left balancing hand. Same head-to-feet BODY scale across allframes; lunging is lower but not a different sized person. Complete swords and bodies safely within cells. VERY WIDE transparent gutters between all cells and outer padding; each complete sprite weapon included fits within70%cellwidth and75%cellheight. Do not allow neighboring sprites to overlap. NO sword glows/slash arcs, no speedlines, no trails/afterimages, no ground shadows, no floor/scenery, no text/grid/HUD. Genuine alpha transparency. Original walking file is identity reference only; draw dedicated attack poses, not a walkcycle. Technical runtime animation asset, not a character lineup illustration.",
+  "identity_reference": "shen.png",
+  "generation_round": 2,
+  "author_static_review": "16 frames reviewed; no detected handedness/anatomy/source clipping defect.",
+  "independent_static_review": "preview_qa independently viewed complete PNG and four numbered row sheets; identity, anatomical handedness, sword attachment and source clipping passed. Runtime quality still pending.",
+  "animation": "attack",
+  "image": "shen_attack.png",
+  "image_size": [
+    1254,
+    1254
+  ],
+  "grid": [
+    4,
+    4
+  ],
+  "frame_count": 16,
+  "unique_source_frames": 16,
+  "sha256": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe",
+  "alpha_threshold": 80,
+  "row_directions": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
+  "row_edges": [
+    0,
+    335,
+    647,
+    944,
+    1254
+  ],
+  "column_edges_by_row": [
+    [
+      0,
+      350,
+      686,
+      942,
+      1254
+    ],
+    [
+      0,
+      365,
+      671,
+      973,
+      1254
+    ],
+    [
+      0,
+      350,
+      688,
+      967,
+      1254
+    ],
+    [
+      0,
+      383,
+      712,
+      964,
+      1254
+    ]
+  ],
+  "column_stages": [
+    "contact",
+    "follow_through",
+    "recovery",
+    "guard"
+  ],
+  "contact_frame": 0,
+  "recommended_duration_seconds": 0.28,
+  "global_body_height_pixels": 269.0,
+  "reference_walk_body_height_pixels": 290.0,
+  "reference_walk_support_x_by_row": [
+    154.25,
+    145.0,
+    108.25,
+    197.25
+  ],
+  "reference_walk_sha256": "6c2f04d6fc4fb942a3f3682da86a169181d99a87916406509322502013de033f",
+  "calibration_method": "Uniform scale from median head-to-sole body height of four guard poses, excluding extended sword. Frame heights are measurements only: never rescale each attack frame. Walk reference uses median of16 head-to-sole heights. foot_x from alpha>80 silhouette in bottom16px sole band, not whole-body/sword bbox.",
+  "calibration_limits": [
+    "Guard stance retains mild knee bend; global factor is a starting measurement and must be checked in-engine.",
+    "Support anchor uses visible lowest boot soles; lifted rear foot does not count as planted support.",
+    "Back contact/follow-through have contiguous projected horizontal bounds at x365 but no pixel overlap; exact region and nearest sampling required."
+  ],
+  "excluded_sources": [],
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "direction": "front",
+      "stage": "contact",
+      "region": [
+        0,
+        0,
+        350,
+        335
+      ],
+      "bbox": [
+        27,
+        47,
+        289,
+        272
+      ],
+      "foot_x": 133.0,
+      "foot_y": 319,
+      "foot_support_bbox": [
+        114,
+        303,
+        38,
+        16
+      ],
+      "body_height_pixels": 272,
+      "head_y": 47,
+      "source_frame": 0,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "direction": "front",
+      "stage": "follow_through",
+      "region": [
+        350,
+        0,
+        336,
+        335
+      ],
+      "bbox": [
+        35,
+        48,
+        250,
+        268
+      ],
+      "foot_x": 78.0,
+      "foot_y": 316,
+      "foot_support_bbox": [
+        60,
+        300,
+        36,
+        16
+      ],
+      "body_height_pixels": 268,
+      "head_y": 48,
+      "source_frame": 1,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "direction": "front",
+      "stage": "recovery",
+      "region": [
+        686,
+        0,
+        256,
+        335
+      ],
+      "bbox": [
+        52,
+        48,
+        170,
+        268
+      ],
+      "foot_x": 131.0,
+      "foot_y": 316,
+      "foot_support_bbox": [
+        115,
+        300,
+        32,
+        16
+      ],
+      "body_height_pixels": 268,
+      "head_y": 48,
+      "source_frame": 2,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "direction": "front",
+      "stage": "guard",
+      "region": [
+        942,
+        0,
+        312,
+        335
+      ],
+      "bbox": [
+        35,
+        48,
+        245,
+        271
+      ],
+      "foot_x": 175.5,
+      "foot_y": 319,
+      "foot_support_bbox": [
+        122,
+        303,
+        107,
+        16
+      ],
+      "body_height_pixels": 271,
+      "head_y": 48,
+      "source_frame": 3,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "column": 0,
+      "direction": "back",
+      "stage": "contact",
+      "region": [
+        0,
+        335,
+        365,
+        312
+      ],
+      "bbox": [
+        33,
+        19,
+        332,
+        261
+      ],
+      "foot_x": 170.5,
+      "foot_y": 280,
+      "foot_support_bbox": [
+        33,
+        264,
+        275,
+        16
+      ],
+      "body_height_pixels": 261,
+      "head_y": 19,
+      "source_frame": 4,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": true
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 1,
+      "direction": "back",
+      "stage": "follow_through",
+      "region": [
+        365,
+        335,
+        306,
+        312
+      ],
+      "bbox": [
+        0,
+        22,
+        286,
+        270
+      ],
+      "foot_x": 105.0,
+      "foot_y": 292,
+      "foot_support_bbox": [
+        85,
+        276,
+        40,
+        16
+      ],
+      "body_height_pixels": 270,
+      "head_y": 22,
+      "source_frame": 5,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": true
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 2,
+      "direction": "back",
+      "stage": "recovery",
+      "region": [
+        671,
+        335,
+        302,
+        312
+      ],
+      "bbox": [
+        21,
+        18,
+        255,
+        275
+      ],
+      "foot_x": 154.5,
+      "foot_y": 293,
+      "foot_support_bbox": [
+        135,
+        277,
+        39,
+        16
+      ],
+      "body_height_pixels": 275,
+      "head_y": 18,
+      "source_frame": 6,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 3,
+      "direction": "back",
+      "stage": "guard",
+      "region": [
+        973,
+        335,
+        281,
+        312
+      ],
+      "bbox": [
+        26,
+        16,
+        239,
+        276
+      ],
+      "foot_x": 124.0,
+      "foot_y": 292,
+      "foot_support_bbox": [
+        63,
+        276,
+        122,
+        16
+      ],
+      "body_height_pixels": 276,
+      "head_y": 16,
+      "source_frame": 7,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "column": 0,
+      "direction": "left",
+      "stage": "contact",
+      "region": [
+        0,
+        647,
+        350,
+        297
+      ],
+      "bbox": [
+        17,
+        31,
+        325,
+        242
+      ],
+      "foot_x": 199.0,
+      "foot_y": 273,
+      "foot_support_bbox": [
+        62,
+        257,
+        274,
+        16
+      ],
+      "body_height_pixels": 242,
+      "head_y": 31,
+      "source_frame": 8,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "column": 1,
+      "direction": "left",
+      "stage": "follow_through",
+      "region": [
+        350,
+        647,
+        338,
+        297
+      ],
+      "bbox": [
+        9,
+        22,
+        293,
+        254
+      ],
+      "foot_x": 91.0,
+      "foot_y": 276,
+      "foot_support_bbox": [
+        64,
+        260,
+        54,
+        16
+      ],
+      "body_height_pixels": 254,
+      "head_y": 22,
+      "source_frame": 9,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "column": 2,
+      "direction": "left",
+      "stage": "recovery",
+      "region": [
+        688,
+        647,
+        279,
+        297
+      ],
+      "bbox": [
+        37,
+        19,
+        222,
+        263
+      ],
+      "foot_x": 109.5,
+      "foot_y": 282,
+      "foot_support_bbox": [
+        89,
+        266,
+        41,
+        16
+      ],
+      "body_height_pixels": 263,
+      "head_y": 19,
+      "source_frame": 10,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "column": 3,
+      "direction": "left",
+      "stage": "guard",
+      "region": [
+        967,
+        647,
+        287,
+        297
+      ],
+      "bbox": [
+        21,
+        19,
+        241,
+        267
+      ],
+      "foot_x": 98.5,
+      "foot_y": 286,
+      "foot_support_bbox": [
+        78,
+        270,
+        41,
+        16
+      ],
+      "body_height_pixels": 267,
+      "head_y": 19,
+      "source_frame": 11,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 12,
+      "row": 3,
+      "column": 0,
+      "direction": "right",
+      "stage": "contact",
+      "region": [
+        0,
+        944,
+        383,
+        310
+      ],
+      "bbox": [
+        35,
+        19,
+        339,
+        252
+      ],
+      "foot_x": 170.5,
+      "foot_y": 271,
+      "foot_support_bbox": [
+        35,
+        255,
+        271,
+        16
+      ],
+      "body_height_pixels": 252,
+      "head_y": 19,
+      "source_frame": 12,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "column": 1,
+      "direction": "right",
+      "stage": "follow_through",
+      "region": [
+        383,
+        944,
+        329,
+        310
+      ],
+      "bbox": [
+        9,
+        12,
+        314,
+        248
+      ],
+      "foot_x": 134.0,
+      "foot_y": 260,
+      "foot_support_bbox": [
+        25,
+        244,
+        218,
+        16
+      ],
+      "body_height_pixels": 248,
+      "head_y": 12,
+      "source_frame": 13,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "column": 2,
+      "direction": "right",
+      "stage": "recovery",
+      "region": [
+        712,
+        944,
+        252,
+        310
+      ],
+      "bbox": [
+        7,
+        12,
+        206,
+        266
+      ],
+      "foot_x": 178.0,
+      "foot_y": 278,
+      "foot_support_bbox": [
+        155,
+        262,
+        46,
+        16
+      ],
+      "body_height_pixels": 266,
+      "head_y": 12,
+      "source_frame": 14,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "column": 3,
+      "direction": "right",
+      "stage": "guard",
+      "region": [
+        964,
+        944,
+        290,
+        310
+      ],
+      "bbox": [
+        39,
+        16,
+        234,
+        255
+      ],
+      "foot_x": 163.5,
+      "foot_y": 271,
+      "foot_support_bbox": [
+        75,
+        255,
+        177,
+        16
+      ],
+      "body_height_pixels": 255,
+      "head_y": 16,
+      "source_frame": 15,
+      "usable": true,
+      "source_clipped": false,
+      "tight_horizontal_gutter": false
+    }
+  ]
+}

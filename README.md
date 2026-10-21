@@ -2,7 +2,7 @@
 
 PC 单人刷宝游戏，使用 Godot 4.5.2 Standard、Forward+ 与 GDScript。以 DNF 的城镇选关、连招和装备成长为体验参考，以《八方旅人》的像素角色与立体场景融合为视觉参考，制作原创世界与内容。项目名暂定。
 
-**当前：精修代表性战斗切片，画面尚未达到已认可的雨夜渡口参考图。此仓库现阶段包含工作记录与设计文档，游戏源码迁移尚未完成。**
+**当前：精修代表性战斗切片，画面尚未达到已认可的雨夜渡口参考图。源码、原创资源与测试已从校验后的 v4 检查点迁入；本轮原生引擎导入、预览与旧矿洞逻辑回归通过。**
 
 - [项目工作总账](PROJECT_WORKLOG.md)：原始目标、真实进度、问题、优先级、每轮记录。
 - [已确认设计](docs/DESIGN_BASELINE.md)：用户选择与待定提案的边界。
@@ -12,9 +12,17 @@ PC 单人刷宝游戏，使用 Godot 4.5.2 Standard、Forward+ 与 GDScript。�
 
 ## 开发入口
 
-源码迁移后，Godot 工程应位于 `ember-town/`。固定使用 **Godot 4.5.2**；新预览入口为 `adventure.tscn`，旧矿洞入口与旧存档需保留。目前不要据此 README 认为可以直接从本仓库启动游戏。
+Godot 工程位于 `ember-town/`。固定使用 **Godot 4.5.2**；新预览入口为 `adventure.tscn`，旧矿洞入口与旧存档需保留。安装对应引擎后可直接打开 `ember-town/project.godot`，或运行下方命令。
 
-历史代表预览包含城镇选关、渡口三波战斗、独立三阶段首领、四人选三轮换、装备成长和结算返回；这些是此前检查点的实现记录，并非本次 GitHub 中已迁入或重新运行验证的代码。
+历史代表预览包含城镇选关、渡口三波战斗、独立三阶段首领、四人选三轮换、装备成长和结算返回；这些功能已迁入本仓库，并完成本轮自动逻辑回归；完整故事与游戏内容仍未完成。
+
+```sh
+Godot --path ember-town
+python3 ember-town/tests/run_preview_qa.py --engine /absolute/path/to/Godot
+python3 ember-town/tests/run_qa.py --engine /absolute/path/to/Godot
+```
+
+命令中的 Godot 应替换为本机 4.5.2 可执行程序路径。验证结果见 [本轮记录](docs/verification/2026-10-21-import/README.md)，源码来源见 [导入清单](docs/SOURCE_IMPORT.json)。运行时与导出包不随源码提交。
 
 ## 交付标准
 

@@ -1,0 +1,66 @@
+{
+  "scope": "Native Godot production-action and isolated persistence checks; no Windows execution or GPU performance claim",
+  "completed_utc": "2026-10-16T06:26:32.590522+00:00",
+  "source_sha256": {
+    "scripts/adventure.gd": "7a6c05e8320b702d7bc855cb66a95720ebf2ec02c1a5020b7502fd5eb0a6d20a",
+    "scripts/adventure_combat.gd": "457e998c7706eebca7770309279158cfab68f5ab49c5ee07fc69c480b5d3ee17",
+    "scripts/adventure_hud.gd": "68188b86fbdc3412657b9dd94edf765178c2a52b153e3fa3cc062268463d1de5",
+    "scripts/adventure_progress.gd": "ceb9d5c2e767949c53fba4cd3c4178ecd781a5a405e2b3acd4ec4fafa9f643c5",
+    "scripts/game.gd": "b3fc66156ef8a0cff5169a88c4ac175932403759e926442d3df04fbd68cf3305",
+    "scripts/room.gd": "03b802ee64988add73c9ff9b437098f93d55943a4ec28c83bc3f493eab27c72f",
+    "scripts/waterfront.gd": "61f3d2d5d8ebf8739be2ecca96bd528b9821ea43efb31c4fd35bd0816cbc3e87"
+  },
+  "results": [
+    {
+      "stage": "version",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.028,
+      "passed": true,
+      "engine_error": false,
+      "details": null
+    },
+    {
+      "stage": "import",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--editor",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--quit"
+      ],
+      "exit_code": 0,
+      "seconds": 10.956,
+      "passed": true,
+      "engine_error": false,
+      "details": null
+    },
+    {
+      "stage": "integration",
+      "command": [
+        "/workspace/scratch/75c92baf237b/tools/godot/Godot_v4.5.2-stable_linux.x86_64",
+        "--headless",
+        "--path",
+        "/workspace/scratch/75c92baf237b/ember-town",
+        "--script",
+        "res://tests/preview_checks.gd",
+        "--",
+        "--preview-case=integration",
+        "--test-profile=/tmp/linchuan-preview-qa-07_xb35d/integration.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.298,
+      "passed": true,
+      "engine_error": false,
+      "details": {
+        "case": "integration",
+        "checks": 30,
+        "failures": []
+      }
+    }
+  ]
+}
