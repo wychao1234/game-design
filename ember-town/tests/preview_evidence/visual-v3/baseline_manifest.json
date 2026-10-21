@@ -1,0 +1,11 @@
+{
+  "status": "baseline only; v3 implementation not reviewed or passed",
+  "prior_scope": "visual-v2 history remains unchanged; no inherited test pass",
+  "reference_sha256": {
+    "tests/preview_evidence/visual-v2/art-world-final.png": "eb76bc561cac4c8af897028015575a06da5cd175d32cf9e02fc457ac2b5b788c",
+    "tests/preview_evidence/art_review_v2.md": "641f8629b46ea656f28ce7a769acfa9724d04be61baaeec99bccff6fbd16ebcb",
+    "assets/characters/shen.png": "6c2f04d6fc4fb942a3f3682da86a169181d99a87916406509322502013de033f",
+    "assets/characters/shen.json": "309cbd6a8beec1d200df0b0c34a506a41a32c49794b090f36cec543492d037b5",
+    "docs/VISUAL_V3_BASELINE.md": "b8ca512db8f1c22822aa0b638e88dfce37e18d557135c5bb14fb20717224f950"
+  }
+}

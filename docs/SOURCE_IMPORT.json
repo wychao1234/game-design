@@ -1,0 +1,1192 @@
+{
+  "source": "linchuan-polish-checkpoint.zip",
+  "version": 4,
+  "archive_sha256": "76665b1ac2ba51dac7ee430f1e61bfe63d69bd86cd7d8b7c59238ce75981526b",
+  "archive_bytes": 189817782,
+  "crc_passed": true,
+  "imported": [
+    {
+      "path": "main.tscn",
+      "bytes": 164,
+      "sha256": "800845606a4c2bda6dbd655394bcfe3c02c798abbd211bad0119c819e7bdd8c6"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 46,
+      "sha256": "dc6300d803ace0cb9063b583b0a28ff12b5e8e7a0c9735144b1f70872d919999"
+    },
+    {
+      "path": "adventure.tscn",
+      "bytes": 197,
+      "sha256": "06881199ec9355d19360bebf66e7fc877f9f141dc5e7f6348a35e9f7b5c66b66"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 620,
+      "sha256": "5a456da291fe71b0028d5ccea9871e49c1f3e9f0afa01318d07f80ecf171b3d5"
+    },
+    {
+      "path": "icon.svg.import",
+      "bytes": 1012,
+      "sha256": "481b589ede09a564d8e3e8af9b5474ca2b6c8a741a9b6ee4314946acff24b86b"
+    },
+    {
+      "path": "icon.svg",
+      "bytes": 346,
+      "sha256": "ae6fed82f4482d6cdecb8b29f6fa42f5940bcae1bc117e0605361afe4e6f13ac"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2406,
+      "sha256": "46103bdfc9d38bf7de836fe04fc6b47d024cd7250f44366c3afa14d0c51790d1"
+    },
+    {
+      "path": "LICENSES/Godot-MIT.txt",
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    {
+      "path": "LICENSES/Noto-CJK-copyright.txt",
+      "bytes": 14712,
+      "sha256": "849f4ea9c214fa4ac3593b770c699f387534b11ce671264c1b10d85bdcb5997b"
+    },
+    {
+      "path": "tests/shen_attack_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "4cae942f184c92be27ec836c8980dcf67b0ff18d819551d27d258596b69cbe9e"
+    },
+    {
+      "path": "tests/shen_attack_checks.gd",
+      "bytes": 8910,
+      "sha256": "fd72eb861c32c541e0b431bffd54e86ab47a8b6dd033bb143c4303290aefb7bc"
+    },
+    {
+      "path": "tests/loot_visual_fixture.gd",
+      "bytes": 3919,
+      "sha256": "60c95135f7364aa25167a39caff768be96268ba4a974329e656a6c11011a4d55"
+    },
+    {
+      "path": "tests/independent_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "5b533c89774f245000551d35e830e6c430815be145373008a99a7bc5b4b860ca"
+    },
+    {
+      "path": "tests/visual_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "0a4dbe2c675fdcfbdc50f50b2fdf9488f3fadde781ba66917810e096c702e504"
+    },
+    {
+      "path": "tests/run_preview_qa.py",
+      "bytes": 3601,
+      "sha256": "cec43f898dac1becd34767d3857052ba684d0140d933cbdc5b898f552f8dfcbe"
+    },
+    {
+      "path": "tests/shen_attack_visual_review.gd",
+      "bytes": 7637,
+      "sha256": "fd66a0af878992e647c286dc8f5078946e20ae82f2acb1205d7ab9aae4e91ad7"
+    },
+    {
+      "path": "tests/preview_visual.gd.uid",
+      "bytes": 20,
+      "sha256": "9b66f68986b8ea628d4628d5a97a34023d61d0ea13dbd1130cbc32a322d4cb6b"
+    },
+    {
+      "path": "tests/progress_preview_checks.gd",
+      "bytes": 8097,
+      "sha256": "b3b74822a211fae454baac02ee9582a9cfc2e2dee22ac7ff24dac89bd97938d5"
+    },
+    {
+      "path": "tests/combat_preview_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "8c553d355d7ecade4e683b433875fbc3f4589bb6bcdb174ada58d5789436e1e9"
+    },
+    {
+      "path": "tests/hud_atlas_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "415ec82975e92d93e13a3155c12558d58b2226a45a0fed8197f095b58883167a"
+    },
+    {
+      "path": "tests/run_shen_visual.py",
+      "bytes": 5260,
+      "sha256": "ac8306a2ecb06c999f9fc026b001ed0749fde87b7a5fc97d2be5375e0b8930a0"
+    },
+    {
+      "path": "tests/hud_atlas_checks.gd",
+      "bytes": 1227,
+      "sha256": "2f40768942c3390da989f22ec0a4c5ae9be24a7bd995d817dddac0d2eedbeaec"
+    },
+    {
+      "path": "tests/combat_feedback_visual_review.gd",
+      "bytes": 4033,
+      "sha256": "8d92e236b6421130b1bca6973096b169c174e8688b2afffd8832148d4115c2a9"
+    },
+    {
+      "path": "tests/independent_checks.gd",
+      "bytes": 9983,
+      "sha256": "5ae542f3b299eb6aeaa58420959dd662c160d1e099eb9333c5ee7c9680f44633"
+    },
+    {
+      "path": "tests/combat_render_probe.gd.uid",
+      "bytes": 20,
+      "sha256": "6e4e096f0cbbc603ed19ff043b969101575c5bd6871e86d5dd4493049d2aa3ee"
+    },
+    {
+      "path": "tests/waterfront_checks.gd",
+      "bytes": 4798,
+      "sha256": "28129dad9401f23cfedea0d139008e92ab9d865da4eec2519b22b3b3b9b09b8f"
+    },
+    {
+      "path": "tests/camera_bounds_review.gd",
+      "bytes": 5024,
+      "sha256": "96ddea5d31e784b66c2d6fd6e71a5cdcf1be029abfb4da04580c94d1147513c4"
+    },
+    {
+      "path": "tests/preview_visual.gd",
+      "bytes": 1256,
+      "sha256": "689299c261edbae4827991328561bdaf53228a215a812260a160f5945f79a21e"
+    },
+    {
+      "path": "tests/extract_shen_review.py",
+      "bytes": 3640,
+      "sha256": "350e3098bb2e7645c4f6393149c8f59a876ee2d23db2d34979aefd95d22387f4"
+    },
+    {
+      "path": "tests/waterfront_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "f8de62d5237ea3962e3c8da8c57979b6ae198ad03f9f64d7e643b0f16aee7145"
+    },
+    {
+      "path": "tests/visual_checks.gd",
+      "bytes": 1019,
+      "sha256": "582386dee5dcbb9520984fa0f3ea756498c4ecdfc5442ae8b97fcfc6512c7e08"
+    },
+    {
+      "path": "tests/preview_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "854722f846a8eb9e1ce8f8958b4ace01e064f3ae9b22240dbc744515261f9c06"
+    },
+    {
+      "path": "tests/camera_bounds_review.gd.uid",
+      "bytes": 20,
+      "sha256": "07a855f4ae0ee5a80da4e942599ea2b4d51368abb592677e329463eef598cbed"
+    },
+    {
+      "path": "tests/run_qa.py",
+      "bytes": 3541,
+      "sha256": "9aab2bc33f1717a65b4defc42834794f1c7f2e32452b0187022c7c51f6435a1c"
+    },
+    {
+      "path": "tests/progress_preview_checks.gd.uid",
+      "bytes": 20,
+      "sha256": "fa9e6ea5662358329a3d53ef8ef8d87c34bddeecb1d7852b584f1d1a6769825b"
+    },
+    {
+      "path": "tests/combat_render_probe.gd",
+      "bytes": 3223,
+      "sha256": "49d92660325d02847cbd9f5c03886a6b1b0eb833f45f22402ce94450be96d61e"
+    },
+    {
+      "path": "tests/combat_preview_checks.gd",
+      "bytes": 6492,
+      "sha256": "1e6d6c236e65e7634d9cd65de85be1a02509e7f92be60be28637b943977eda3b"
+    },
+    {
+      "path": "tests/shen_attack_visual_review.gd.uid",
+      "bytes": 20,
+      "sha256": "07c1e5af0e4d9c13cb8d456767dae079d95e6f1631d572dd39aa1d81ea4d770e"
+    },
+    {
+      "path": "tests/preview_checks.gd",
+      "bytes": 28375,
+      "sha256": "40bdb80524e5e51e342c935ff085c422fc83528b2d458ee0de2ea5b44fd7fac1"
+    },
+    {
+      "path": "tests/combat_feedback_visual_review.gd.uid",
+      "bytes": 20,
+      "sha256": "b343196d21ca49eaa9742ca777da84bf90790c1bab92d87e93dcdd56fb1cbcba"
+    },
+    {
+      "path": "assets/hero_sheet.png",
+      "bytes": 69754,
+      "sha256": "467946b67274e0873eebc8e45ce5c3a7a592b918067748b7698122c61cd630bd"
+    },
+    {
+      "path": "assets/hero_source.png",
+      "bytes": 1151603,
+      "sha256": "1ffbc08ea41d9317c2d144d73aaba8a92067b6d95234358edf19a5e2bfe1a55e"
+    },
+    {
+      "path": "assets/enemy_source.png",
+      "bytes": 1250770,
+      "sha256": "d14d38c5ac4a7fa490ba2668c1394e217a99978df6a8bb77b3353b566b49e220"
+    },
+    {
+      "path": "assets/enemy_source.png.import",
+      "bytes": 947,
+      "sha256": "5d2daed19b4f2b058f08db90c2d00e7a6cad5ee823111b337aa9944c7fcba7e3"
+    },
+    {
+      "path": "assets/summon_source.png",
+      "bytes": 947647,
+      "sha256": "5e1030e793dd3c86cda8ddfa852f316a7232e81e5b2c2e115cbd873cc1d38733"
+    },
+    {
+      "path": "assets/hero_source.png.import",
+      "bytes": 944,
+      "sha256": "ac425bb213fafa6582c6f012d6ff601d6c53438528d2e2a52602d59bdea3f29d"
+    },
+    {
+      "path": "assets/hero_sheet.png.import",
+      "bytes": 941,
+      "sha256": "86971ff6505667c96e78ade1a10197cce6103d5c26ce1f0621943def9047f0ee"
+    },
+    {
+      "path": "assets/summon_sheet.png.import",
+      "bytes": 946,
+      "sha256": "286044550ba816d6f1d0c9a01ff4595778c8851a2e48a34bd8e03c28eb6314e6"
+    },
+    {
+      "path": "assets/enemy_sheet.png.import",
+      "bytes": 944,
+      "sha256": "75b060f9ee111fbbb3127d20bcd65fec5b0f5efb54b4cf6b2b2d8ccb8b8b067e"
+    },
+    {
+      "path": "assets/enemy_sheet.png",
+      "bytes": 61824,
+      "sha256": "0ba2c8d864d8b45014dd1fb4c387a7d5cc83fbe65b30848e05f1700ef4cc38bb"
+    },
+    {
+      "path": "assets/summon_source.png.import",
+      "bytes": 950,
+      "sha256": "7573298dc0d368ef2e19fa16b91141b74c37961958614a09eb3ce0bdb5209dd2"
+    },
+    {
+      "path": "assets/summon_sheet.png",
+      "bytes": 24860,
+      "sha256": "1eb23e24ff59309f8d190cfd2f0e31ee31705c3f8fea43beb7417c4a4fc13f6e"
+    },
+    {
+      "path": "tools/capture_art_frame.gd.uid",
+      "bytes": 19,
+      "sha256": "f3a79f1318365f1546f298be7fdc35e1e0f96d9277effc5c46167d866f2d0f8b"
+    },
+    {
+      "path": "tools/render_waterfront_detail.gd.uid",
+      "bytes": 20,
+      "sha256": "5d38284a62fe63f769ba752629f7deedd4e16c02cb7c741eba7a4caf41960225"
+    },
+    {
+      "path": "tools/build.py",
+      "bytes": 9112,
+      "sha256": "dd0ce86a42b5085401e73ffb86c5db21b879f498a0bcf786f997a79316fd64fb"
+    },
+    {
+      "path": "tools/render_waterfront.gd.uid",
+      "bytes": 20,
+      "sha256": "c49d5faacd260b937c8b76642dfad47044a521266fa02d4ac5b929e8cf7c4f50"
+    },
+    {
+      "path": "tools/render_waterfront_detail.gd",
+      "bytes": 1362,
+      "sha256": "33ae84c2088c1118a4c7ba8a922930ed5054e5f33125c8541680d69adb583ad9"
+    },
+    {
+      "path": "tools/capture_art_frame.gd",
+      "bytes": 3723,
+      "sha256": "2fd2843826053d34d11ece57402faf0c1a72a575220da0ea7974a905492daa04"
+    },
+    {
+      "path": "tools/render_waterfront.gd",
+      "bytes": 1376,
+      "sha256": "33a19a28f2b6088f2978ff7ad643d0dfe87ba3b764f5cd96ae10adcd3cf72929"
+    },
+    {
+      "path": "scripts/room.gd.uid",
+      "bytes": 19,
+      "sha256": "ab7023f3acf3c7fe31140da896f6ef884c5dfe43bb7c84ad2346518847ca8c9d"
+    },
+    {
+      "path": "scripts/adventure.gd.uid",
+      "bytes": 19,
+      "sha256": "f9a0ce13d8b01e4cda5c074c23986f25cb3742dc3248bb3650054a80f213a90c"
+    },
+    {
+      "path": "scripts/room.gd",
+      "bytes": 16292,
+      "sha256": "03b802ee64988add73c9ff9b437098f93d55943a4ec28c83bc3f493eab27c72f"
+    },
+    {
+      "path": "scripts/game.gd",
+      "bytes": 33376,
+      "sha256": "b3fc66156ef8a0cff5169a88c4ac175932403759e926442d3df04fbd68cf3305"
+    },
+    {
+      "path": "scripts/adventure_combat.gd.uid",
+      "bytes": 20,
+      "sha256": "fbcfc603de4f56203ee764da21d65a5ba853fa7dbbe4f69ff339705e15894f8a"
+    },
+    {
+      "path": "scripts/adventure_hud.gd.uid",
+      "bytes": 19,
+      "sha256": "23c92f81f95edaf562ab68844e7f60f22f66ac07481365a8da0b654cc1c1cd52"
+    },
+    {
+      "path": "scripts/game.gd.uid",
+      "bytes": 20,
+      "sha256": "763759dcdc229dcf0ef0af458982ef45b81ed0b18b3c470f1d3b729f755334f5"
+    },
+    {
+      "path": "scripts/adventure.gd",
+      "bytes": 23202,
+      "sha256": "9eb99b345e933fcc729911f36033a4cf1fbc440e7078091acfe0a3640e538b14"
+    },
+    {
+      "path": "scripts/adventure_progress.gd",
+      "bytes": 19467,
+      "sha256": "ceb9d5c2e767949c53fba4cd3c4178ecd781a5a405e2b3acd4ec4fafa9f643c5"
+    },
+    {
+      "path": "scripts/adventure_combat.gd",
+      "bytes": 58809,
+      "sha256": "0039ef7d7349f980833a333d50727b640477b264219018a51e6e8d51ce321298"
+    },
+    {
+      "path": "scripts/adventure_hud.gd",
+      "bytes": 32346,
+      "sha256": "f1aba3279a3afc7277b62897272a61dab43bf6cbf6d6cfdda36cb3c63f7e0b24"
+    },
+    {
+      "path": "scripts/waterfront.gd",
+      "bytes": 53614,
+      "sha256": "c4ea3e95ba8a3db0945084e31d3a44f1142c0b0c4b43530006c2175d2329486f"
+    },
+    {
+      "path": "scripts/waterfront.gd.uid",
+      "bytes": 20,
+      "sha256": "f0f471e2fe33c8eb66d4ab973ae741bd9264142af9a3840b2c5dbd27a24bb479"
+    },
+    {
+      "path": "scripts/adventure_progress.gd.uid",
+      "bytes": 20,
+      "sha256": "cc2ae4e1d2292cd5b08d4c72cd8e57205a4fbf627c9e5a0408c78962a1def89f"
+    },
+    {
+      "path": "docs/VISUAL_REVISION.md",
+      "bytes": 4901,
+      "sha256": "6b951b064614d255519cec0eb0976bc003cba7d366973fa7f9eabc1c12f38235"
+    },
+    {
+      "path": "docs/ASSET_PROMPTS.md",
+      "bytes": 1332,
+      "sha256": "6ceb86be85736ac578017baffdfd10048e4892508b85212c360e023212672f7f"
+    },
+    {
+      "path": "docs/PLAY.md",
+      "bytes": 5383,
+      "sha256": "0b652fa7d8a14c036e402a39b34f37d18c0e24790163ccef91202a19b5a9a862"
+    },
+    {
+      "path": "docs/CHARACTER_ASSETS.md",
+      "bytes": 6437,
+      "sha256": "62fada5c4f8ab51e01fca31c50ec55096098167bfe74c82dfcbb1252b08d0f4e"
+    },
+    {
+      "path": "docs/VISUAL_ITERATION_2026-10-17.md",
+      "bytes": 1870,
+      "sha256": "0494db3c2cd04b67e3eba85ccca2ab5601926748c83d7616621f9ede82ffea8a"
+    },
+    {
+      "path": "docs/WORKLOG.md",
+      "bytes": 3292,
+      "sha256": "8ea2618af752b75583159cf48ea23215ccd543e6416796f9a93bf96c52f21998"
+    },
+    {
+      "path": "docs/VISUAL_TARGET.md",
+      "bytes": 1450,
+      "sha256": "4f88150cd8905d839402beb94d230be7caed7a656abc678f11e0f1aae8cf7715"
+    },
+    {
+      "path": "docs/QA.md",
+      "bytes": 16187,
+      "sha256": "84ea9e6ba273b75448d0ef739bd1dbb07d85111846a30bbae7263bfb2c7f288a"
+    },
+    {
+      "path": "docs/ASSETS.md",
+      "bytes": 821,
+      "sha256": "3ce6af6494ba2f1a85c7dd9f9b9835537a1ba43d862fe85f522e227b97a160a8"
+    },
+    {
+      "path": "docs/VISUAL_V3_BASELINE.md",
+      "bytes": 7976,
+      "sha256": "07a27b53c5c99e08b82d1ec7b894cbfe8a004d0645901d2c2bcf785c38d4ce41"
+    },
+    {
+      "path": "docs/THIRD_PARTY.md",
+      "bytes": 806,
+      "sha256": "107e1b5ab0ad85892afdde6c89a0c107fff5b39a18b8d9cbd165be8270069ba1"
+    },
+    {
+      "path": "docs/SHEN_ATTACK_PILOT.md",
+      "bytes": 5408,
+      "sha256": "2405040fe33f06ba816a78915491df6542d96b9a032ffbd469c19972b5938a9d"
+    },
+    {
+      "path": "tests/preview_evidence/summary.json",
+      "bytes": 7334,
+      "sha256": "ffb8b52df59403d1bef7ad293e68a93f84c5ef23059a35abf048ff761aab4e7e"
+    },
+    {
+      "path": "tests/preview_evidence/art_review_v2.md",
+      "bytes": 12792,
+      "sha256": "641f8629b46ea656f28ce7a769acfa9724d04be61baaeec99bccff6fbd16ebcb"
+    },
+    {
+      "path": "tests/preview_evidence/ui-regression/summary.json",
+      "bytes": 2249,
+      "sha256": "f0cbe55ddd97126080885c10eb7554faab7429e523ddc40875fd9389411b9f71"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v2/movie.json",
+      "bytes": 359,
+      "sha256": "afa42313612ba5a9467f90a20fa142f9760bb665950dbf83b68628c06905560f"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v2/review_manifest.json",
+      "bytes": 2754,
+      "sha256": "1f114e54e2cf58ead22ccb7b8b30bf0e28ce4d93105f557c68c96893c20eb824"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/composition-profile.json",
+      "bytes": 1124,
+      "sha256": "8d6381c8308ec36212edc58107a7e61292d95d943d5aa17c634300db49b734c2"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/art_review_v3.md",
+      "bytes": 3787,
+      "sha256": "64a4dcdafa279e343f73852ce576f6e955aaae1998e329fb146a2022503be310"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/checkpoint_v3_inventory.json",
+      "bytes": 2592,
+      "sha256": "e75a2e1b68479925692cbde8bbcaa19d332dd248983cca8cbd91238f3cfbf6d5"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/water-profile.json",
+      "bytes": 1232,
+      "sha256": "b3ea132e9ad5bf472cbc09f2569c3de3855c5fcb765c4223d1c0d8c4ebd90789"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/checkpoint_v3_inventory.md",
+      "bytes": 2636,
+      "sha256": "578abf764dd4c788d39ea19cb6abeb7783bad787784124881f18f5ecc1d70bc8"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/baseline_manifest.json",
+      "bytes": 731,
+      "sha256": "15aaa15e41d16ad84631d5e0f308d9b06dc1d400e85525028bdd4825256107a4"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack_ink_envelope.json",
+      "bytes": 5098,
+      "sha256": "9139f83167cdbff536ab20fb313033a9dfd778c399deea24591cadcac69af7b7"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack_source_review.json",
+      "bytes": 5263,
+      "sha256": "d3400ddcf8cf3e5972dc0e6a24933080331fdcc94e28c018a568b6e97b746161"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right-progress-native.png",
+      "bytes": 412710,
+      "sha256": "5ab51d048e8fe2ff79f5224a74400fa0c896b01eebd8bd8b9e3c039cfcf31c9f"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/actions.json",
+      "bytes": 88624,
+      "sha256": "6e9127ac2ffb76d5b4825594baf1c83e01b29d5eeef8b7e3601c818c2a131c95"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back-progress-native.png.import",
+      "bytes": 1026,
+      "sha256": "bc66dab897e95b13ff2fb154da51c8fb562b301617d53c55910677bc5dc79022"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/contact-front-current.png.import",
+      "bytes": 1028,
+      "sha256": "54f845c8366b5a7530e7989318ac1accbb8befe34824e2ae07469fe033427353"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/extraction.json",
+      "bytes": 5970,
+      "sha256": "5c7e978c02ed9409d611f818e30a3604fe51fbd0a595e1bfb97f07f26431e51c"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front_basic-full.png",
+      "bytes": 1393256,
+      "sha256": "17d79b9d058e29ab2f765824b2506cf2f73ede20b117371d21a9553bf24bed90"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/fixture-as-recorded.gd.txt",
+      "bytes": 7493,
+      "sha256": "2f6e7394ff5d7845e5b2adcbdf4adb801eae69fd67d1cef0c024c2a9aea50187"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left_basic-native-sequence.png",
+      "bytes": 411149,
+      "sha256": "d7b3b4183b4f1985d206aafb0046a7e07f394caa4e457db7662700e07e56f674"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front_basic-native-sequence.png.import",
+      "bytes": 1047,
+      "sha256": "811dd9ca3e786ef1533ff927b0038b269f840f8ff314048e847695bf3b29098c"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right-progress-native.png.import",
+      "bytes": 1029,
+      "sha256": "a60d34edc97b8ac46f866e389c0e0f5ee6b710a2ef6e51b5316954bef6086745"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/manifest.json",
+      "bytes": 3186,
+      "sha256": "32f958fc591355fa27748e71ea7434828f2bb96ca106f0767a3facc01d0ce6b3"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back_basic-full.png",
+      "bytes": 1395939,
+      "sha256": "e9738f0f2fd790d727b855e75a29ada6c1bd92387d7a163caccdd7b47c6aa995"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left-progress-native.png.import",
+      "bytes": 1026,
+      "sha256": "d8be7ac8f9953200242f34408b0100015c13ec48550e1901d255446da13b5a1a"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front_basic-native-sequence.png",
+      "bytes": 447654,
+      "sha256": "e08ee10f3e2ff63ed74cabca83c76b3c149cea1f854cb502de0968188f8027c1"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right_basic-full.png.import",
+      "bytes": 1014,
+      "sha256": "4e9685b751c6f2bb41fd7658a5edc98158236fe5a9025493f09ff224fe9312cf"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front-progress-native.png.import",
+      "bytes": 1029,
+      "sha256": "5eb4dce60e7b800c03cd6b15fb3d2faa33aa98d41c8ca6258edf3c3c65caf007"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back_basic-full.png.import",
+      "bytes": 1010,
+      "sha256": "446d6649d2edaa9db603262f8def6bc483aeb4187777d53284417ad01a1f03c1"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back_basic-native-sequence.png.import",
+      "bytes": 1044,
+      "sha256": "a35534b4285eee720c5bd0e6c3a6ff0e398e485c5ed6e60b88d62ce7520069cb"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front-progress-native.png",
+      "bytes": 456934,
+      "sha256": "0828c5b57eede506604aff1ce683a8ecc88dc5bb46a1060691b534e0f0c7f196"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back_basic-native-sequence.png",
+      "bytes": 377779,
+      "sha256": "6b944d8cdc6281fb1d2c28ff0987aa49c5bd5917ba72c23c9b32a6b9f098468b"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left_basic-full.png",
+      "bytes": 1404399,
+      "sha256": "a2ffac45e0002738cdd19fc7a2d6713f3be76204c79486d0c5f5d1fdb8c75a66"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/shen-attack.mp4",
+      "bytes": 2255404,
+      "sha256": "fd4505d24ea3f9a7e77c776191887e92febaaa49cb9280068b48a6d1c5ebea1d"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left-progress-native.png",
+      "bytes": 423308,
+      "sha256": "a659dcb6cb19bb45875cec9fbf4c835a85581f6a16640eaff7c5f5d90cfe9115"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/media.json",
+      "bytes": 578,
+      "sha256": "4fe7ee06daaf8bee63c3c6bec99ec7417688d4f955f003d25d29cb5ae5731bc5"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left_basic-native-sequence.png.import",
+      "bytes": 1044,
+      "sha256": "564e795b9d27b79f0cc346d1dfb8a6f1542812dba07ace7b42594e26a8e0ed7f"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/front_basic-full.png.import",
+      "bytes": 1013,
+      "sha256": "8829ef74e473516fb9b1d6e15777d1305a11a44fc60ec114be6ed522baf8844e"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right_basic-native-sequence.png.import",
+      "bytes": 1047,
+      "sha256": "37e19a29df599dc67e45c25691a44f3f7b3f2b41f2f85416d466c0a05afec6ed"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/contact-front-current.png",
+      "bytes": 1903404,
+      "sha256": "1b3e529bd0666aeaf2d173af890b4d84f0bc590f4ac757fd0dab4d3d349c21d5"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right_basic-native-sequence.png",
+      "bytes": 403200,
+      "sha256": "325822a2cad06af11eb6532fd175716d627465c14a918f7d25c6999de1c78ead"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/left_basic-full.png.import",
+      "bytes": 1011,
+      "sha256": "c448d4b0553903fc3b663fa084e5457cf59e55525568de2cb00b891cda79700e"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/back-progress-native.png",
+      "bytes": 379081,
+      "sha256": "5b284db20b1a4e29d266c2d592c6aa22e5b5cf1e8e3cedc6f2eb83b14e5635d0"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final/right_basic-full.png",
+      "bytes": 1402190,
+      "sha256": "2679a16b045c5c7df3808b0c62eae9ed37b2baac0202582478fbfd65464f0a83"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-headless-restored/actions.json",
+      "bytes": 88624,
+      "sha256": "54ba9829f1ad28ff163efdccd646a9fe7edbbe1794c8dafa418a411db059c73e"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-headless-restored/manifest.json",
+      "bytes": 2969,
+      "sha256": "e295be87497348ff583a71623110a808c5cd055ad3215d7415a4c542752635c4"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion/actions.json",
+      "bytes": 67698,
+      "sha256": "1c32c00d5dd251dded6447ea1cb43a8782b134c84f64011908f57ae879342deb"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-motion/manifest.json",
+      "bytes": 2038,
+      "sha256": "929b6c3d42ba376b070d5e5e4fb35d4d2cd891d25535cd217923662dfaa6e649"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-quick/actions.json",
+      "bytes": 67698,
+      "sha256": "1c32c00d5dd251dded6447ea1cb43a8782b134c84f64011908f57ae879342deb"
+    },
+    {
+      "path": "tests/preview_evidence/visual-v3/attack-quick/manifest.json",
+      "bytes": 1657,
+      "sha256": "c898705fc95beb0635fe37dc54aa2e7171cfe32df115d29c50399e87a18f2b36"
+    },
+    {
+      "path": "assets/ui/skill_icons.png.import",
+      "bytes": 945,
+      "sha256": "167b3c870b5b69cc797ed0459f473005b90583de90a7113b76e6bf4ecc2a23a2"
+    },
+    {
+      "path": "assets/ui/skill_icons.png",
+      "bytes": 2960370,
+      "sha256": "acdf474a02324b2a731555ddf359f66008c6c24a97f61c2bf44e755bf93ef8af"
+    },
+    {
+      "path": "assets/ui/skill_icons.json",
+      "bytes": 9822,
+      "sha256": "66b644f400aeb0d91feb2ecacfb20caeab24e94139251cbbe2255ecba8a4efd6"
+    },
+    {
+      "path": "assets/characters/shen_attack.png",
+      "bytes": 1675740,
+      "sha256": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe"
+    },
+    {
+      "path": "assets/characters/shen_attack.json",
+      "bytes": 13911,
+      "sha256": "57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959"
+    },
+    {
+      "path": "assets/characters/foes.png",
+      "bytes": 1933323,
+      "sha256": "881e472e77f2ec0b8ebe5907d4a1d924e745e9acdde58c4aeb77794b88e15025"
+    },
+    {
+      "path": "assets/characters/shen.png",
+      "bytes": 1414626,
+      "sha256": "6c2f04d6fc4fb942a3f3682da86a169181d99a87916406509322502013de033f"
+    },
+    {
+      "path": "assets/characters/foes.json",
+      "bytes": 6512,
+      "sha256": "83768c2b42266e958f1930f77b2f1088cee88d685f6f4c9a1022c26765b7dd8f"
+    },
+    {
+      "path": "assets/characters/lu.png",
+      "bytes": 1258682,
+      "sha256": "67ba70060cc8650def101fa32070909e3a66640cf5d5b776362fbf3045de1946"
+    },
+    {
+      "path": "assets/characters/shen_attack.png.import",
+      "bytes": 955,
+      "sha256": "55ec9c7a3454b2f7fd74771ab70a35690167ec543209f9136cf7041688542ddb"
+    },
+    {
+      "path": "assets/characters/lu.json",
+      "bytes": 6345,
+      "sha256": "c27f10509c449983d53e6e58e06196be993928615f4cc6f99a59e07449ff12db"
+    },
+    {
+      "path": "assets/characters/foes.png.import",
+      "bytes": 933,
+      "sha256": "086e8097e5b039783f3aac0a839d14cc3930dfb202eab7e7b6fff9c78c44fe11"
+    },
+    {
+      "path": "assets/characters/zhu.json",
+      "bytes": 6350,
+      "sha256": "a825bd151664554092dd2d7165e006f902dd880216aa3a2953268a8a9ea79eb9"
+    },
+    {
+      "path": "assets/characters/jiang.png",
+      "bytes": 1367030,
+      "sha256": "e89f9bfd93c71588d4a5239f3f56bb9f3f2f94c49bea9fe2e9124f084d2e5c92"
+    },
+    {
+      "path": "assets/characters/zhu.png",
+      "bytes": 1583163,
+      "sha256": "d7c82b6176510e5d1d291575e198d72ac547ce97b7c78bb88f26be4450e8c9e5"
+    },
+    {
+      "path": "assets/characters/shen.png.import",
+      "bytes": 934,
+      "sha256": "bcbde0b38525cedd6ba9ffecc0e662b8c1e7f687b6fc946d780cd81169434508"
+    },
+    {
+      "path": "assets/characters/zhu.png.import",
+      "bytes": 931,
+      "sha256": "830a6ed70f96813031db5be21b4ad0a4060b6df8314e8e35361f23b1a56a6e3b"
+    },
+    {
+      "path": "assets/characters/jiang.json",
+      "bytes": 6343,
+      "sha256": "8415d86fbb10a431d48e613c73f0da06bcb0e63d6fd2f2e89f305a4ac0a4386f"
+    },
+    {
+      "path": "assets/characters/jiang.png.import",
+      "bytes": 937,
+      "sha256": "9e6e08db2bf4e8828a172ebe48faff8a1ec6e6e980423ce372edd75b407f070c"
+    },
+    {
+      "path": "assets/characters/shen.json",
+      "bytes": 6344,
+      "sha256": "309cbd6a8beec1d200df0b0c34a506a41a32c49794b090f36cec543492d037b5"
+    },
+    {
+      "path": "assets/characters/lu.png.import",
+      "bytes": 928,
+      "sha256": "9973b7f5284089fb70f6c5bb77868a1c948001756cb025b069bdeb24d2b98525"
+    },
+    {
+      "path": "assets/effects/loot_beam.gdshader",
+      "bytes": 579,
+      "sha256": "ced92164f33b891f40be26d6b60f69c7316549d30226e9cd027169a555de7acb"
+    },
+    {
+      "path": "assets/environment/waterfront_window.gdshader",
+      "bytes": 617,
+      "sha256": "ac97d3e23df73fc647941fa8854564dd574b95c106e7db62825a991c48e5e62b"
+    },
+    {
+      "path": "assets/environment/dock_aged_wood.png",
+      "bytes": 3495003,
+      "sha256": "7d14a9c821aaec9b45417759208c23afbcd0dd2573ebae86581f9c374a4d95e4"
+    },
+    {
+      "path": "assets/environment/waterfront_window.gdshader.uid",
+      "bytes": 20,
+      "sha256": "d77d06147ad70832833adcda28a128353690fd704a393718e4faea3aebbb7b85"
+    },
+    {
+      "path": "assets/environment/mine_floor.png",
+      "bytes": 385,
+      "sha256": "811161682cb2a8b97b392b50e8e061f4a8439c44ff501fb9216039f56a51a2e1"
+    },
+    {
+      "path": "assets/environment/waterfront_wetwood.gdshader.uid",
+      "bytes": 20,
+      "sha256": "1e9cc13ed8b157a5aca564cb273ff90c1ec86a9dee45c78713d5edaabb44437a"
+    },
+    {
+      "path": "assets/environment/mine_wall.png.import",
+      "bytes": 949,
+      "sha256": "302afb55d9139c3d19c5794980f03082a336accc36fbc6a1d2ea12e455d02221"
+    },
+    {
+      "path": "assets/environment/waterfront_canvas.gdshader",
+      "bytes": 822,
+      "sha256": "8edb273ab312c5d7fa0fd621de403add8d983fa5bb13a5d6652e5f2f0de484b5"
+    },
+    {
+      "path": "assets/environment/waterfront_clay.gdshader.uid",
+      "bytes": 19,
+      "sha256": "4a2ba8c673bfe7bc30e4bad07b47daba1519b46bc63a6754b4482364a40f2653"
+    },
+    {
+      "path": "assets/environment/waterfront_rope.gdshader.uid",
+      "bytes": 20,
+      "sha256": "cd55d8f60a27183fa68900f34ab73a540906f055805d4f65d11e8d15d2a13267"
+    },
+    {
+      "path": "assets/environment/waterfront_canvas.gdshader.uid",
+      "bytes": 20,
+      "sha256": "6be11e9656f5c65493094399f418e6950b98096c511349fd2d2ca7a33a0c4353"
+    },
+    {
+      "path": "assets/environment/waterfront_plaster.gdshader",
+      "bytes": 764,
+      "sha256": "616f8ee4b3b5681ffe68257c0cb46544bb5d1eb1faa17b4998ee33b1ff608833"
+    },
+    {
+      "path": "assets/environment/waterfront_agediron.gdshader.uid",
+      "bytes": 19,
+      "sha256": "14e226ed2d4e814f976c1e77d9ab9f9eefa3ec8f425af0095ad83ac971937990"
+    },
+    {
+      "path": "assets/environment/dock_aged_wood.png.import",
+      "bytes": 963,
+      "sha256": "5ccfc5bd9fe4b5503625b4f4199b264d0ef785596933f18c9cf65d2945965335"
+    },
+    {
+      "path": "assets/environment/waterfront_propwood.gdshader",
+      "bytes": 2612,
+      "sha256": "2d23b7ea7a445d910ba78401b10283a81355ddc595940508b931d059dbba753c"
+    },
+    {
+      "path": "assets/environment/waterfront_plaster.gdshader.uid",
+      "bytes": 20,
+      "sha256": "2087fdb547c2db165dc9db55e2d692e80191921322afecb893475a8899548321"
+    },
+    {
+      "path": "assets/environment/mine_timber.png",
+      "bytes": 1129,
+      "sha256": "e645c946c20f46f650a5ec8a79ab8292ff7ad86da0a1a302f9112435d1dbf84a"
+    },
+    {
+      "path": "assets/environment/waterfront_wetwood.gdshader",
+      "bytes": 3050,
+      "sha256": "6f729671220fcf59ca748028d6fb6e41fc652b7fea1d907d7ec55c9e6291c3b5"
+    },
+    {
+      "path": "assets/environment/mine_rubble.png",
+      "bytes": 1317,
+      "sha256": "80f304883cc59ae3a9e0ae3f0c6df155c4867b957d430ac4fc86f00766119015"
+    },
+    {
+      "path": "assets/environment/mine_timber.png.import",
+      "bytes": 956,
+      "sha256": "fc4a3d211fdaa1c7b299975deae95eca936e09664012f86d5ba89ed909601d94"
+    },
+    {
+      "path": "assets/environment/mine_wall.png",
+      "bytes": 1108,
+      "sha256": "96fbe1ae84ab71bd5024a11274db87058798fbd313576911dad27ccbd583da94"
+    },
+    {
+      "path": "assets/environment/waterfront_leaf.gdshader.uid",
+      "bytes": 19,
+      "sha256": "9d7e7678a7c7a9bc08152074e59677242af1ba922e198918ed20fc866dda57b6"
+    },
+    {
+      "path": "assets/environment/mine_rubble.png.import",
+      "bytes": 956,
+      "sha256": "4cf3e652709c479a9427d128330202149406c38acfb15164ca8a2e3303679d1f"
+    },
+    {
+      "path": "assets/environment/waterfront_clay.gdshader",
+      "bytes": 753,
+      "sha256": "24058dfc8f5ed621f8d710848e5fb390b1e98a2fbc88895fb2d4be2ce756da0b"
+    },
+    {
+      "path": "assets/environment/waterfront_agediron.gdshader",
+      "bytes": 604,
+      "sha256": "fee3e458f0a4931e36a83a17e9fb2715ca98d02eb94ac3b1f20d46aae5445250"
+    },
+    {
+      "path": "assets/environment/mine_iron.png.import",
+      "bytes": 950,
+      "sha256": "973ac3d7480038b2c6ea8eadd5be8b65f360bddfef357921821270245601ca5d"
+    },
+    {
+      "path": "assets/environment/mine_iron.png",
+      "bytes": 1188,
+      "sha256": "9232449e8a3da0e5db62579789b20e03db57e4780b898cb7a750d697772ef531"
+    },
+    {
+      "path": "assets/environment/waterfront_propwood.gdshader.uid",
+      "bytes": 20,
+      "sha256": "3704f947c3a68d886d170fed757ca020eabfe27eded8b52f9f162885e4a17609"
+    },
+    {
+      "path": "assets/environment/waterfront_leaf.gdshader",
+      "bytes": 454,
+      "sha256": "a4a6c23df95559b3f0dabfb624b1d86dcd23140a070eb00a024f6dbc7c7bde7b"
+    },
+    {
+      "path": "assets/environment/waterfront_water.gdshader.uid",
+      "bytes": 20,
+      "sha256": "039b8ea237f67026b79a5365b7cf2561f13911bddbe2409936f7ecce12110447"
+    },
+    {
+      "path": "assets/environment/mine_floor.png.import",
+      "bytes": 953,
+      "sha256": "5d6ecc5fd18919963941ac486f852d0f5a96b1bbf948831364f5ba121dd4f903"
+    },
+    {
+      "path": "assets/environment/waterfront_water.gdshader",
+      "bytes": 2221,
+      "sha256": "ef5e57666c7dff8bbd0d9ac4f005d65c8068c48795e8b6927e02081f9ae4f5ec"
+    },
+    {
+      "path": "assets/environment/waterfront_rope.gdshader",
+      "bytes": 283,
+      "sha256": "cca305dfd7f9721f91d205506efdbdf73f6d5c9b1e5e95e0ce8b590158100493"
+    },
+    {
+      "path": "assets/characters/originals/jiang-generated.png.import",
+      "bytes": 977,
+      "sha256": "e3db10ecbd67efcece821fb2e1e977320a986a920ad3d2d61a8232f200530243"
+    },
+    {
+      "path": "assets/characters/originals/shen-generated.png",
+      "bytes": 1414626,
+      "sha256": "6c2f04d6fc4fb942a3f3682da86a169181d99a87916406509322502013de033f"
+    },
+    {
+      "path": "assets/characters/originals/jiang-generated.png",
+      "bytes": 1367030,
+      "sha256": "e89f9bfd93c71588d4a5239f3f56bb9f3f2f94c49bea9fe2e9124f084d2e5c92"
+    },
+    {
+      "path": "assets/characters/originals/foes-generated.png.import",
+      "bytes": 973,
+      "sha256": "0588e74a92fb6645f6025a104be60a074879badab70ecd43a3eb32252d268c63"
+    },
+    {
+      "path": "assets/characters/originals/zhu-generated.png",
+      "bytes": 1583163,
+      "sha256": "d7c82b6176510e5d1d291575e198d72ac547ce97b7c78bb88f26be4450e8c9e5"
+    },
+    {
+      "path": "assets/characters/originals/shen-generated.png.import",
+      "bytes": 974,
+      "sha256": "9419af6542061f6174359d3540e2064a88d8ac799c6b7ba139849b036500c4b3"
+    },
+    {
+      "path": "assets/characters/originals/zhu-generated.png.import",
+      "bytes": 971,
+      "sha256": "d2ba8fcb4122b47c82ba5580c7fb9e852562ad24ceecd69a9c8f686070a5b402"
+    },
+    {
+      "path": "assets/characters/originals/lu-generated.png",
+      "bytes": 1258682,
+      "sha256": "67ba70060cc8650def101fa32070909e3a66640cf5d5b776362fbf3045de1946"
+    },
+    {
+      "path": "assets/characters/originals/foes-generated.png",
+      "bytes": 1933323,
+      "sha256": "881e472e77f2ec0b8ebe5907d4a1d924e745e9acdde58c4aeb77794b88e15025"
+    },
+    {
+      "path": "assets/characters/originals/lu-generated.png.import",
+      "bytes": 967,
+      "sha256": "ad2d2d56e04b8aa17312728cdd74148906627f8d8d791f13a2fb23a34363ff90"
+    },
+    {
+      "path": "docs/design/01_地区与章节方案_v1.md",
+      "bytes": 19421,
+      "sha256": "d99bb69dee6e75901e50e06577a7074ee7225d1e872fc95fc2650aad4c4056dc"
+    },
+    {
+      "path": "docs/design/03_装备技能与成长方案_v1.md",
+      "bytes": 13171,
+      "sha256": "961246cf941e9c1ad224ecf551bff3c6d419411c2cb4f8d36224e58ccc241cb8"
+    },
+    {
+      "path": "docs/design/02_角色阵容与关系方案_v1.md",
+      "bytes": 15147,
+      "sha256": "db07bd791abe28955d3413ab18d69a65f5c4ac51c591c68aeb8e117d43270888"
+    },
+    {
+      "path": "docs/reference/approved-ferry-target.json",
+      "bytes": 420,
+      "sha256": "1858f5e53a2fb29db8548ad83a9fb634b90d7f5d18ddc58796989672af7f9381"
+    },
+    {
+      "path": "docs/reference/approved-ferry-target.png.import",
+      "bytes": 982,
+      "sha256": "06932d7d13b1de74693da7203a1cf9ec9d235c624cd55d01ed38ca86e7fe334a"
+    },
+    {
+      "path": "docs/reference/approved-ferry-target.png",
+      "bytes": 2661639,
+      "sha256": "eb776c6c13de5a26cfa28be077c5950f2fb61d5828958d0669149902eeb26e55"
+    }
+  ],
+  "excluded": [
+    "tests/evidence/version.log",
+    "tests/evidence/collision.log",
+    "tests/evidence/summary.json",
+    "tests/evidence/visual-final.png",
+    "tests/evidence/recover-main.log",
+    "tests/evidence/protect-corrupt.log",
+    "tests/evidence/combat.log",
+    "tests/evidence/visual-combat.png.import",
+    "tests/evidence/visual-combat.png",
+    "tests/evidence/second-render.png",
+    "tests/evidence/save-write.log",
+    "tests/evidence/first-render.png",
+    "tests/evidence/visual-final.png.import",
+    "tests/evidence/save-read.log",
+    "tests/evidence/first-render.png.import",
+    "tests/evidence/second-render.png.import",
+    "tests/evidence/logic.log",
+    "tests/evidence/visual-combat.log",
+    "tests/evidence/visual-final.log",
+    "tests/evidence/import.log",
+    "tests/preview_evidence/independent-ferry.png.import",
+    "tests/preview_evidence/version.log",
+    "tests/preview_evidence/collision.log",
+    "tests/preview_evidence/independent-ferry.log",
+    "tests/preview_evidence/recover-main.log",
+    "tests/preview_evidence/protect-corrupt.log",
+    "tests/preview_evidence/combat.log",
+    "tests/preview_evidence/integration.log",
+    "tests/preview_evidence/progress.log",
+    "tests/preview_evidence/save-write.log",
+    "tests/preview_evidence/save-read.log",
+    "tests/preview_evidence/independent-ferry.png",
+    "tests/preview_evidence/effects.log",
+    "tests/preview_evidence/import.log",
+    "tests/preview_evidence/ui-regression/version.log",
+    "tests/preview_evidence/ui-regression/integration.log",
+    "tests/preview_evidence/ui-regression/import.log",
+    "tests/preview_evidence/screens/town.png.import",
+    "tests/preview_evidence/screens/boss.png.import",
+    "tests/preview_evidence/screens/town.png",
+    "tests/preview_evidence/screens/boss.png",
+    "tests/preview_evidence/screens/ferry.png",
+    "tests/preview_evidence/screens/ferry.png.import",
+    "tests/preview_evidence/visual-v2/art-world-final.png.import",
+    "tests/preview_evidence/visual-v2/before-same-view.png.import",
+    "tests/preview_evidence/visual-v2/boss-v2.png",
+    "tests/preview_evidence/visual-v2/camera-bounds.log",
+    "tests/preview_evidence/visual-v2/after-same-view.png",
+    "tests/preview_evidence/visual-v2/after-same-view.png.import",
+    "tests/preview_evidence/visual-v2/visual-movie.log",
+    "tests/preview_evidence/visual-v2/art-world-final.png",
+    "tests/preview_evidence/visual-v2/before-same-view.png",
+    "tests/preview_evidence/visual-v2/world.log",
+    "tests/preview_evidence/visual-v2/town-v2.png",
+    "tests/preview_evidence/visual-v2/town-v2.png.import",
+    "tests/preview_evidence/visual-v2/boss-v2.png.import",
+    "tests/preview_evidence/visual-v2/hud-atlas.log",
+    "tests/preview_evidence/visual-v3/after1_posts_ship_native.png",
+    "tests/preview_evidence/visual-v3/before_posts_ship_native.png",
+    "tests/preview_evidence/visual-v3/world-4-coldfilm-native.png.import",
+    "tests/preview_evidence/visual-v3/perspective-restored-26.png",
+    "tests/preview_evidence/visual-v3/world-4-ship-native.png.import",
+    "tests/preview_evidence/visual-v3/world-4-coldfilm-native.png",
+    "tests/preview_evidence/visual-v3/world-normal-1.png",
+    "tests/preview_evidence/visual-v3/world-close-props-1.png.import",
+    "tests/preview_evidence/visual-v3/world-4-foreground-native.png",
+    "tests/preview_evidence/visual-v3/composition-13.png",
+    "tests/preview_evidence/visual-v3/.world-foreground-4-boss.png.fJ6Arc",
+    "tests/preview_evidence/visual-v3/after1_cargo_native.png.import",
+    "tests/preview_evidence/visual-v3/world-foreground-4-boss.png.import",
+    "tests/preview_evidence/visual-v3/before_lamp_post_native.png.import",
+    "tests/preview_evidence/visual-v3/before_posts_ship_native.png.import",
+    "tests/preview_evidence/visual-v3/before_lamp_post_native.png",
+    "tests/preview_evidence/visual-v3/before_roof_window_native.png.import",
+    "tests/preview_evidence/visual-v3/after1_cargo_native.png",
+    "tests/preview_evidence/visual-v3/composition-13.log",
+    "tests/preview_evidence/visual-v3/after1_lamp_post_native.png.import",
+    "tests/preview_evidence/visual-v3/world-normal-1.png.import",
+    "tests/preview_evidence/visual-v3/before_cargo_native.png",
+    "tests/preview_evidence/visual-v3/perspective-camera-production.log",
+    "tests/preview_evidence/visual-v3/world-shipbridge-3.png",
+    "tests/preview_evidence/visual-v3/after1_roof_window_native.png.import",
+    "tests/preview_evidence/visual-v3/water-2-hud.png",
+    "tests/preview_evidence/visual-v3/world-close-props-1.png",
+    "tests/preview_evidence/visual-v3/world-shipbridge-3.png.import",
+    "tests/preview_evidence/visual-v3/perspective-restored-26.png.import",
+    "tests/preview_evidence/visual-v3/before_cargo_native.png.import",
+    "tests/preview_evidence/visual-v3/after1_posts_ship_native.png.import",
+    "tests/preview_evidence/visual-v3/after1_lamp_post_native.png",
+    "tests/preview_evidence/visual-v3/world-foreground-4-ferry.png",
+    "tests/preview_evidence/visual-v3/water-2-hud.png.import",
+    "tests/preview_evidence/visual-v3/water-msaa-1.log",
+    "tests/preview_evidence/visual-v3/water-msaa-1.png",
+    "tests/preview_evidence/visual-v3/water-msaa-1.png.import",
+    "tests/preview_evidence/visual-v3/world-4-foreground-native.png.import",
+    "tests/preview_evidence/visual-v3/before_roof_window_native.png",
+    "tests/preview_evidence/visual-v3/after1_roof_window_native.png",
+    "tests/preview_evidence/visual-v3/world-close-roof-1.png.import",
+    "tests/preview_evidence/visual-v3/world-close-roof-1.png",
+    "tests/preview_evidence/visual-v3/world-4-ship-native.png",
+    "tests/preview_evidence/visual-v3/camera-production.log",
+    "tests/preview_evidence/visual-v3/water-2-hud.log",
+    "tests/preview_evidence/visual-v3/world-foreground-4-ferry.png.import",
+    "tests/preview_evidence/visual-v3/ui-mipmap-import.log",
+    "tests/preview_evidence/visual-v3/world-foreground-4-boss.png",
+    "tests/preview_evidence/visual-v3/composition-13.png.import",
+    "tests/preview_evidence/visual-v2/motion/motion-review-03.png",
+    "tests/preview_evidence/visual-v2/motion/motion-review-04.png",
+    "tests/preview_evidence/visual-v2/motion/motion-review-01.png.import",
+    "tests/preview_evidence/visual-v2/motion/motion-review-02.png",
+    "tests/preview_evidence/visual-v2/motion/motion-review-04.png.import",
+    "tests/preview_evidence/visual-v2/motion/motion-review-01.png",
+    "tests/preview_evidence/visual-v2/motion/motion-review-02.png.import",
+    "tests/preview_evidence/visual-v2/motion/motion-review-03.png.import",
+    "tests/preview_evidence/visual-v3/attack-motion-restored-final/.shen-attack.avi.4Xz4Tc",
+    "tests/preview_evidence/visual-v3/attack-motion-restored-final/shen-attack.avi",
+    "tests/preview_evidence/visual-v3/attack-motion-restored-final/.shen-attack.avi.mozP1Y",
+    "tests/preview_evidence/visual-v3/attack-headless-restored/engine.log",
+    "tests/preview_evidence/visual-v3/attack-motion/contact-front.png",
+    "tests/preview_evidence/visual-v3/attack-motion/shen-attack.avi",
+    "tests/preview_evidence/visual-v3/attack-motion/contact-front.png.import",
+    "tests/preview_evidence/visual-v3/attack-motion/engine.log",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.JIHkzb.0Vtcc8",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.JIHkzb.ma4kNm.casWpI",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.sXybQh",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.JIHkzb.ma4kNm",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.JIHkzb",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.JIHkzb.0Vtcc8.hQm649.qmDnq4",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.tJMIFd",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.ecaHpS",
+    "tests/preview_evidence/visual-v3/attack-quick/engine.log",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.BqwpeS",
+    "tests/preview_evidence/visual-v3/attack-quick/.engine.log.n7Fcuu.jG8lHt.ecaHpS.BEYlTk",
+    "assets/characters/shen_attack_recovery_candidate.png.import",
+    "assets/characters/shen_attack_recovery_candidate.png",
+    "assets/characters/shen_attack_recovery_candidate2.png",
+    "tests/preview_evidence/visual-v3/attack-motion-restored-final/engine.log",
+    "assets/fonts/NotoSansCJK-Regular.ttc",
+    "assets/fonts/NotoSansCJK-Regular.ttc.import"
+  ],
+  "note": "Excluded hidden temporary files, legacy evidence output, AVI, redundant rendered PNGs and rejected recovery candidates. Original production asset bytes preserved. The historical engine.log is excluded by the repository log policy; imported hashes describe the initial checkpoint bytes, before later tracked fixes. Font collection replaced with lossless original default-face WOFF2 after initial source import; original retained in v4 recovery archive. Imported hashes identify original baseline bytes before subsequent source changes.",
+  "transformations": [
+    {
+      "kind": "font_container",
+      "source": "assets/fonts/NotoSansCJK-Regular.ttc",
+      "output": "assets/fonts/NotoSansCJKJP-Regular.woff2",
+      "verification": "docs/verification/2026-10-21-import/font-conversion.json",
+      "reason": "Lossless original default face; request-size limit prevents transferring full TTC. Glyphs/cmap/outline/metric tables preserved."
+    }
+  ]
+}

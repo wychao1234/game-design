@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "generation_tool": "built-in image_gen",
+  "source_output": "exec-cd5b0314-691e-4ccc-9ea7-68ecc4af2e68.png",
+  "transparent_background": false,
+  "generation_prompt": "Use case: stylized-concept. Asset type: PRODUCTION GAME SKILL ICON ATLAS, not concept art or gameplay screen. Create ONE landscape image EXACTLY FIVE COLUMNS and FOUR ROWS, TWENTY equal SQUARE skill-icon tiles, complete filled 5x4 regular grid. Each square icon has dark navy-black background, rich luminous ICE BLUE and WHITE painterly magical brush strokes, layered crisp energy trails and depth, restrained slender weathered brass-gold frame inside the tile, handsome detailed action RPG ability icon quality. Consistent visual language, readable small shapes. Leave an OBVIOUS PURE BLACK GUTTER between EVERY tile, about4percent tile width; clear outer black padding too. No letters, text, numerals, key labels, captions, logos or watermark anywhere. No empty tiles. No scenic environment. Each icon is an isolated emblematic action illustration. Row1 swordsman Shen: column1 a bright crescent sword slash; column2 a shadowy dashing blade with swept energy trails; column3 a paper talisman surrounded by spirit flame; column4 a binding-contract magical sigil; column5 a huge spirit-blade spiral ultimate. Row2 spearman Jiang: col1 sweeping spear arc; col2 hooked spear pulling with chains; col3 a spearhead making a circular shockwave; col4 planted war flag with blue energy at base; col5 a golden spear storm ultimate. Row3 bellcaster Zhu: col1 small glowing spirit lantern; col2 binding circle with paper talismans; col3 handbell directing sparks; col4 sonic ring emitted from a bell; col5 a vortex of many lanterns ultimate. Row4 archer Lu: col1 three flying arrows; col2 backward sweeping feather and bow energy; col3 a star-marked arrow; col4 piercing arrow burst; col5 constellation arrow-rain ultimate. Overall blue-white icons, subtle gold accent for Jiang, teal for Zhu, restrained violet for Lu. Keep all icon interiors similarly dark, all frames same dimensions, dark navy internal texture and luminous edge definition. Absolutely EXACTLY20 icons, five across four down, uniformly aligned equal squares with pureblack gutters, NO text and NO keyboard labels. This is the actual texture atlas to be sampled into a game HUD.",
+  "image": "skill_icons.png",
+  "image_size": [
+    1402,
+    1122
+  ],
+  "grid": [
+    5,
+    4
+  ],
+  "frame_count": 20,
+  "roles": [
+    "shen",
+    "jiang",
+    "zhu",
+    "lu"
+  ],
+  "slot_count": 5,
+  "region_size": [
+    260,
+    260
+  ],
+  "region_rule": "Actual dark gutter analysis, square regions centered on gold artwork frame. Includes black padding. Do not split full PNG into 5x4 equal regions.",
+  "sha256": "acdf474a02324b2a731555ddf359f66008c6c24a97f61c2bf44e755bf93ef8af",
+  "content_limitations": [
+    "Talisman art contains decorative pseudo-calligraphy; no labels/numbers/keyboard bindings. It is not official UI lettering.",
+    "Minor differences in generated gold frame aspect ratios are preserved inside equal square sampling regions."
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "slot": 0,
+      "role": "shen",
+      "id": "crescent_slash",
+      "is_awakening": false,
+      "region": [
+        16,
+        12,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        20,
+        21,
+        252,
+        243
+      ]
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "slot": 1,
+      "role": "shen",
+      "id": "shadow_dash_blade",
+      "is_awakening": false,
+      "region": [
+        294,
+        12,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        297,
+        21,
+        254,
+        243
+      ]
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "slot": 2,
+      "role": "shen",
+      "id": "talisman_spirit_flame",
+      "is_awakening": false,
+      "region": [
+        571,
+        12,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        575,
+        21,
+        253,
+        243
+      ]
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "slot": 3,
+      "role": "shen",
+      "id": "binding_contract_sigil",
+      "is_awakening": false,
+      "region": [
+        849,
+        12,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        853,
+        21,
+        253,
+        243
+      ]
+    },
+    {
+      "index": 4,
+      "row": 0,
+      "column": 4,
+      "slot": 4,
+      "role": "shen",
+      "id": "spirit_blade_spiral",
+      "is_awakening": true,
+      "region": [
+        1127,
+        12,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        1131,
+        21,
+        253,
+        243
+      ]
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 0,
+      "slot": 0,
+      "role": "jiang",
+      "id": "spear_sweep",
+      "is_awakening": false,
+      "region": [
+        16,
+        286,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        20,
+        290,
+        252,
+        252
+      ]
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 1,
+      "slot": 1,
+      "role": "jiang",
+      "id": "hooking_spear_pull",
+      "is_awakening": false,
+      "region": [
+        294,
+        286,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        297,
+        290,
+        254,
+        252
+      ]
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 2,
+      "slot": 2,
+      "role": "jiang",
+      "id": "shockwave_spear",
+      "is_awakening": false,
+      "region": [
+        571,
+        286,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        575,
+        290,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 8,
+      "row": 1,
+      "column": 3,
+      "slot": 3,
+      "role": "jiang",
+      "id": "planted_war_flag",
+      "is_awakening": false,
+      "region": [
+        849,
+        286,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        853,
+        290,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 9,
+      "row": 1,
+      "column": 4,
+      "slot": 4,
+      "role": "jiang",
+      "id": "golden_spear_storm",
+      "is_awakening": true,
+      "region": [
+        1127,
+        286,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        1131,
+        290,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "column": 0,
+      "slot": 0,
+      "role": "zhu",
+      "id": "spirit_lantern",
+      "is_awakening": false,
+      "region": [
+        16,
+        564,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        20,
+        568,
+        252,
+        252
+      ]
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "column": 1,
+      "slot": 1,
+      "role": "zhu",
+      "id": "binding_circle_talisman",
+      "is_awakening": false,
+      "region": [
+        294,
+        564,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        297,
+        568,
+        254,
+        252
+      ]
+    },
+    {
+      "index": 12,
+      "row": 2,
+      "column": 2,
+      "slot": 2,
+      "role": "zhu",
+      "id": "commanding_bell_sparks",
+      "is_awakening": false,
+      "region": [
+        571,
+        564,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        575,
+        568,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 13,
+      "row": 2,
+      "column": 3,
+      "slot": 3,
+      "role": "zhu",
+      "id": "sonic_bell_ring",
+      "is_awakening": false,
+      "region": [
+        849,
+        564,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        853,
+        568,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 14,
+      "row": 2,
+      "column": 4,
+      "slot": 4,
+      "role": "zhu",
+      "id": "hundred_lantern_vortex",
+      "is_awakening": true,
+      "region": [
+        1127,
+        564,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        1131,
+        568,
+        253,
+        252
+      ]
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "column": 0,
+      "slot": 0,
+      "role": "lu",
+      "id": "triple_arrow",
+      "is_awakening": false,
+      "region": [
+        16,
+        837,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        20,
+        845,
+        252,
+        244
+      ]
+    },
+    {
+      "index": 16,
+      "row": 3,
+      "column": 1,
+      "slot": 1,
+      "role": "lu",
+      "id": "backstep_feather",
+      "is_awakening": false,
+      "region": [
+        294,
+        837,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        297,
+        845,
+        254,
+        244
+      ]
+    },
+    {
+      "index": 17,
+      "row": 3,
+      "column": 2,
+      "slot": 2,
+      "role": "lu",
+      "id": "star_mark_arrow",
+      "is_awakening": false,
+      "region": [
+        571,
+        837,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        575,
+        845,
+        253,
+        244
+      ]
+    },
+    {
+      "index": 18,
+      "row": 3,
+      "column": 3,
+      "slot": 3,
+      "role": "lu",
+      "id": "piercing_arrow_burst",
+      "is_awakening": false,
+      "region": [
+        849,
+        837,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        853,
+        845,
+        253,
+        244
+      ]
+    },
+    {
+      "index": 19,
+      "row": 3,
+      "column": 4,
+      "slot": 4,
+      "role": "lu",
+      "id": "constellation_arrow_rain",
+      "is_awakening": true,
+      "region": [
+        1127,
+        837,
+        260,
+        260
+      ],
+      "source_frame_bounds": [
+        1131,
+        845,
+        253,
+        244
+      ]
+    }
+  ]
+}

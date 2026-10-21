@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-10-16T11:43:05.115888+00:00",
+  "scope": "Independent final static and four sampled movie-frame review; improved direction, not final concept-art fidelity or full continuous-animation acceptance",
+  "sha256": {
+    "scripts/game.gd": "b3fc66156ef8a0cff5169a88c4ac175932403759e926442d3df04fbd68cf3305",
+    "scripts/waterfront.gd": "451dd858c0965d70793f616256313817a113f1b24f281f4a2b4492fa782b9d8c",
+    "scripts/room.gd": "03b802ee64988add73c9ff9b437098f93d55943a4ec28c83bc3f493eab27c72f",
+    "scripts/adventure_combat.gd": "77a0c6784eb1daa9bec9be7d51ddf2922cf3c40d3c103aa9894c30b5ff9e9db2",
+    "scripts/adventure_hud.gd": "b7be53f81ccfd553473e0ed4f05ceafa374c7b9f3ea5182fc2f66961f60211ee",
+    "scripts/adventure_progress.gd": "ceb9d5c2e767949c53fba4cd3c4178ecd781a5a405e2b3acd4ec4fafa9f643c5",
+    "scripts/adventure.gd": "97f5cc3ddd97980b6f7b6ce4996fee898e973951c9e9979558ec9c7b8223efb8",
+    "assets/environment/waterfront_plaster.gdshader": "616f8ee4b3b5681ffe68257c0cb46544bb5d1eb1faa17b4998ee33b1ff608833",
+    "assets/environment/waterfront_water.gdshader": "45fa852b695f1155eccb3e77e5987bcb92a7c16d78cf545b621dadacadde1f8a",
+    "assets/environment/waterfront_leaf.gdshader": "a4a6c23df95559b3f0dabfb624b1d86dcd23140a070eb00a024f6dbc7c7bde7b",
+    "assets/environment/waterfront_wetwood.gdshader": "9c9f4f596603e714692f654323a0f5660bd3ee22eb5ffd17f944a658bfd1f40f",
+    "assets/environment/dock_aged_wood.png": "7d14a9c821aaec9b45417759208c23afbcd0dd2573ebae86581f9c374a4d95e4",
+    "assets/ui/skill_icons.png": "acdf474a02324b2a731555ddf359f66008c6c24a97f61c2bf44e755bf93ef8af",
+    "assets/ui/skill_icons.json": "66b644f400aeb0d91feb2ecacfb20caeab24e94139251cbbe2255ecba8a4efd6",
+    "tests/preview_evidence/visual-v2/art-world-final.png": "eb76bc561cac4c8af897028015575a06da5cd175d32cf9e02fc457ac2b5b788c",
+    "tests/preview_evidence/visual-v2/motion/motion-review-02.png": "e3d8b4a6210a4594f6dc01e707d4f01b58d86b5ceef1e68c76b615875b8d0e1c",
+    "tests/preview_evidence/visual-v2/motion/motion-review-01.png": "a9d72914bf2095d9a13c7fa743651417ee16f35314286ea64f70815c72c613f1",
+    "tests/preview_evidence/visual-v2/motion/motion-review-03.png": "dcd4fd4e346f5f92db969a26fc0e9494c8aabdf1c6f3ff8f64f15d9228c2d0a7",
+    "tests/preview_evidence/visual-v2/motion/motion-review-04.png": "ab21011f45d06e95e462869fadd96ca5d261a1dad0b2a79ab5f40a73f6e3e2bd",
+    "tests/preview_evidence/visual-v2/town-v2.png": "29c5aef5982dd9bd2da3a6decb6ea668bc03d8fe25a9a38ccc9a660275465c82",
+    "tests/preview_evidence/visual-v2/boss-v2.png": "4f098a941fbbfa64479de1031eb67c72c22e47cde558dbd08a6ba909b0e01c28",
+    "tests/preview_evidence/visual-v2/movie.json": "afa42313612ba5a9467f90a20fa142f9760bb665950dbf83b68628c06905560f"
+  }
+}

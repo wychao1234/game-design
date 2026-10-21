@@ -1,0 +1,161 @@
+{
+  "scope": "Independent visual static source review only; not engine animation or timing acceptance",
+  "reviewed_image_sha256": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe",
+  "reviewed_metadata_sha256": "57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959",
+  "reference_walk_sha256": "6c2f04d6fc4fb942a3f3682da86a169181d99a87916406509322502013de033f",
+  "viewed": "Full source sheet plus four numbered row sheets",
+  "frames": [
+    {
+      "index": 0,
+      "direction": "front",
+      "stage": "contact",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 1,
+      "direction": "front",
+      "stage": "follow_through",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 2,
+      "direction": "front",
+      "stage": "recovery",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 3,
+      "direction": "front",
+      "stage": "guard",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 4,
+      "direction": "back",
+      "stage": "contact",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 5,
+      "direction": "back",
+      "stage": "follow_through",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 6,
+      "direction": "back",
+      "stage": "recovery",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 7,
+      "direction": "back",
+      "stage": "guard",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 8,
+      "direction": "left",
+      "stage": "contact",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 9,
+      "direction": "left",
+      "stage": "follow_through",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 10,
+      "direction": "left",
+      "stage": "recovery",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 11,
+      "direction": "left",
+      "stage": "guard",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 12,
+      "direction": "right",
+      "stage": "contact",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 13,
+      "direction": "right",
+      "stage": "follow_through",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 14,
+      "direction": "right",
+      "stage": "recovery",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    },
+    {
+      "index": 15,
+      "direction": "right",
+      "stage": "guard",
+      "static_identity": "pass",
+      "right_hand_single_blade_and_red_left_arm": "pass",
+      "visible_source_clipping": "not observed",
+      "engine_anchor_motion_timing": "pending"
+    }
+  ],
+  "required_engine_checks": [
+    "Front frames 0/1 to2/3 torso/support transition",
+    "Right frames12/13 to14/15 torso/support transition",
+    "Back frames4/5 tight gutter at source x365, nearest edge sampling",
+    "Actual instant hit event occurs on contact column0",
+    "Normal-scale and slow playback, return to idle/walk/party state"
+  ],
+  "external_delivery": "blocked until original visual target met"
+}

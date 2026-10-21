@@ -1,0 +1,64 @@
+{
+  "scope": "Actual checkpoint-v3 restore inventory. Existing media are historical evidence for their recorded SHA; no new engine or GPU checks performed in this restore pass.",
+  "utc": "2026-10-17T13:22:24.936997+00:00",
+  "files": {
+    "tests/run_shen_visual.py": {
+      "exists": true,
+      "sha256": "ac8306a2ecb06c999f9fc026b001ed0749fde87b7a5fc97d2be5375e0b8930a0"
+    },
+    "tests/extract_shen_review.py": {
+      "exists": true,
+      "sha256": "350e3098bb2e7645c4f6393149c8f59a876ee2d23db2d34979aefd95d22387f4"
+    },
+    "tests/shen_attack_visual_review.gd": {
+      "exists": true,
+      "sha256": "fd66a0af878992e647c286dc8f5078946e20ae82f2acb1205d7ab9aae4e91ad7"
+    },
+    "tests/combat_feedback_visual_review.gd": {
+      "exists": true,
+      "sha256": "8d92e236b6421130b1bca6973096b169c174e8688b2afffd8832148d4115c2a9"
+    },
+    "docs/reference/approved-ferry-target.png": {
+      "exists": true,
+      "sha256": "eb776c6c13de5a26cfa28be077c5950f2fb61d5828958d0669149902eeb26e55"
+    },
+    "scripts/adventure_combat.gd": {
+      "exists": true,
+      "sha256": "66ccfcce4f917f56605060e118da0b6641e55b761fd1245d005608debe6b6994"
+    },
+    "scripts/waterfront.gd": {
+      "exists": true,
+      "sha256": "b9b7b3d474c9ca1d9854bdc9900514d775300aa9bc4b39ae237a757605450e04"
+    },
+    "assets/characters/shen_attack.png": {
+      "exists": true,
+      "sha256": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe"
+    },
+    "assets/characters/shen_attack_recovery_candidate.png": {
+      "exists": true,
+      "sha256": "80e5002dffffa2c6198c4fa32ce5703d750c6248431e09818130d8e7150c2e34"
+    }
+  },
+  "saved_long_capture": {
+    "path": "tests/preview_evidence/visual-v3/attack-motion-restored-final",
+    "mp4_sha256_matches_saved_media_json": true,
+    "recorded_frames": 366,
+    "fixed_fps": 40,
+    "duration_seconds": 9.15,
+    "visual_acceptance": "recovery hard cuts rejected; not overall art approval"
+  },
+  "absent": [
+    "tests/preview_evidence/visual-v3/feedback-short-final",
+    "assets/characters/shen_attack_recovery_candidate2.png",
+    "assets/characters/shen_attack_recovery_candidate2.json"
+  ],
+  "not_found_by_search": [
+    "loot-named assets/tests",
+    "2.3-second candidate fixture"
+  ],
+  "needs_real_rerun": [
+    "3.1-second feedback/front-oblique-foot capture after unified import",
+    "candidate2 recovery pilot if assets can be recovered or regenerated"
+  ],
+  "recovered_runner_note": "Added --fixture feedback to reuse source/engine-error/scenery/save-isolation gates; Python syntax compiled only, not engine-rerun."
+}

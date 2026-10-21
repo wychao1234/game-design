@@ -1,0 +1,41 @@
+{
+  "method": "Lossless WOFF2 of original TTC face0, same Godot default face; no glyph subsetting",
+  "source_sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+  "source_face": 0,
+  "output_sha256": "09c9b4076759927b6cacac2d6507c14a6b1dbcd8c6a004ef23b1b0dc1787aa89",
+  "output_bytes": 11440352,
+  "glyphs": 65535,
+  "cmap_entries": 44810,
+  "glyph_and_cmap_identical": true,
+  "font_table_differences": {
+    "head": [
+      [
+        8,
+        149,
+        127
+      ],
+      [
+        9,
+        4,
+        114
+      ],
+      [
+        10,
+        197,
+        3
+      ],
+      [
+        11,
+        12,
+        152
+      ],
+      [
+        16,
+        0,
+        8
+      ]
+    ]
+  },
+  "note": "Only container checksum/WOFF2 head flags differ; outlines, cmap, metrics and all other tables identical. Full original TTC remains in verified v4 archive. No new runtime dependency.",
+  "license": "LICENSES/Noto-CJK-copyright.txt"
+}

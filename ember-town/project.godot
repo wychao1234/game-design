@@ -1,0 +1,23 @@
+; Ember Town visual prototype - Godot 4
+config_version=5
+
+[application]
+config/name="临川 · 雨灯秘境"
+run/main_scene="res://adventure.tscn"
+config/features=PackedStringArray("4.5", "Forward Plus")
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/window_width_override=1440
+window/size/window_height_override=810
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="forward_plus"
+anti_aliasing/quality/msaa_3d=2
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+
+[audio]
+driver/enable_input=false

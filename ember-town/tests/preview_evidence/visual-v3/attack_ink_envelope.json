@@ -1,0 +1,170 @@
+{
+  "method": "Actual production sprite pixel_size and offset from all 16 runtime poses, applied to source metadata visible bbox. Billboard X, metres; not a render acceptance.",
+  "frame_count": 16,
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -130.217239379883,
+      "visible_ink_min_x_m": -0.8981761000804077,
+      "visible_ink_max_x_m": 1.6166450139381527,
+      "visible_ink_height_m": 2.3668904602527627
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -75.2172393798828,
+      "visible_ink_min_x_m": -0.34996250083068503,
+      "visible_ink_max_x_m": 1.82548828984281,
+      "visible_ink_height_m": 2.332083247601987
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -128.217239379883,
+      "visible_ink_min_x_m": -0.6632274146876702,
+      "visible_ink_max_x_m": 0.8160791229703065,
+      "visible_ink_height_m": 2.332083247601987
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -172.717239379883,
+      "visible_ink_min_x_m": -1.19838830919335,
+      "visible_ink_max_x_m": 0.9335534656666753,
+      "visible_ink_height_m": 2.3581886570900688
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "column": 0,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -175.369827270508,
+      "visible_ink_min_x_m": -1.2388742132147024,
+      "visible_ink_max_x_m": 1.6501244367996992,
+      "visible_ink_height_m": 2.271170625463129
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 1,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -109.869827270508,
+      "visible_ink_min_x_m": -0.9560656104271479,
+      "visible_ink_max_x_m": 1.5326500941033308,
+      "visible_ink_height_m": 2.3494868539273748
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 2,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -159.369827270508,
+      "visible_ink_min_x_m": -1.2040670005639265,
+      "visible_ink_max_x_m": 1.0148928059230387,
+      "visible_ink_height_m": 2.3929958697408447
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 3,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -128.869827270508,
+      "visible_ink_min_x_m": -0.8951529882882902,
+      "visible_ink_max_x_m": 1.1845779675955712,
+      "visible_ink_height_m": 2.4016976729035386
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "column": 0,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -241.668960571289,
+      "visible_ink_min_x_m": -1.9550250716584119,
+      "visible_ink_max_x_m": 0.8730609562171319,
+      "visible_ink_height_m": 2.1058363653719434
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "column": 1,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -133.668960571289,
+      "visible_ink_min_x_m": -1.084844755389014,
+      "visible_ink_max_x_m": 1.4647835712803225,
+      "visible_ink_height_m": 2.210258003324271
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "column": 2,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -152.168960571289,
+      "visible_ink_min_x_m": -1.0021776253434211,
+      "visible_ink_max_x_m": 0.9296226767746427,
+      "visible_ink_height_m": 2.288574231788517
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "column": 3,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -141.168960571289,
+      "visible_ink_min_x_m": -1.045686641156891,
+      "visible_ink_max_x_m": 1.0514479210523584,
+      "visible_ink_height_m": 2.323381444439293
+    },
+    {
+      "index": 12,
+      "row": 3,
+      "column": 0,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -129.454315185547,
+      "visible_ink_min_x_m": -0.8219228586116869,
+      "visible_ink_max_x_m": 2.1279884135415728,
+      "visible_ink_height_m": 2.192854396998883
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "column": 1,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -92.9543075561523,
+      "visible_ink_min_x_m": -0.7305538590139092,
+      "visible_ink_max_x_m": 2.001812334072001,
+      "visible_ink_height_m": 2.1580471843481073
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "column": 2,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -136.954315185547,
+      "visible_ink_min_x_m": -1.130836870887323,
+      "visible_ink_max_x_m": 0.6617345806276368,
+      "visible_ink_height_m": 2.314679641276599
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "column": 3,
+      "pixel_size": 0.00870180316269398,
+      "offset_x": -122.454307556152,
+      "visible_ink_min_x_m": -0.7262029574325597,
+      "visible_ink_max_x_m": 1.310018982637832,
+      "visible_ink_height_m": 2.218959806486965
+    }
+  ],
+  "min_x_m": -1.9550250716584119,
+  "max_x_m": 2.1279884135415728,
+  "recommended_symmetric_camera_test_halfwidth_m": 2.15,
+  "attack_metadata_sha256": "57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959"
+}
