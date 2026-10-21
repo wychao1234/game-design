@@ -84,16 +84,6 @@ func _materials_init() -> void:
 	_mat("moss",Color("3f655b"),1.0)
 	_mat("ceramic",Color("688d8b"),0.32)
 	_mat("fruit",Color("c7a259"),0.78)
-	_mat("paper",Color("f2aa54"),0.80)
-	var paper: StandardMaterial3D = _materials.paper
-	paper.emission_enabled = true
-	paper.emission = Color("ff701c")
-	paper.emission_energy_multiplier = 3.0
-	_mat("window",Color("bd8d45"),0.60)
-	var window: StandardMaterial3D = _materials.window
-	window.emission_enabled = true
-	window.emission = Color("ff943e")
-	window.emission_energy_multiplier = 1.2
 	_detail_materials()
 	for i in range(4):
 		_mat("floor%d" % i,Color(0.67+i*0.045,0.76+i*0.025,0.79+i*0.02),0.32+i*0.05,"mine_floor")
@@ -287,8 +277,33 @@ func _ground() -> void:
 			x += width
 			column += 1
 		for z in [-6.5,6.5]: _box(Vector3(0,-0.09,z),Vector3(21.1,0.25,0.25),"darkwood")
+		_deck_repair(Vector3(-4,0,-4),false)
+		_deck_repair(Vector3(7,0,4),true)
 	for z in [-6.8,6.8]: _box(Vector3(0,-0.14,z),Vector3(21.7,0.28,0.22),"darkwood")
 	for x in [-10.8,10.8]: _box(Vector3(x,-0.14,0),Vector3(0.22,0.28,13.8),"darkwood")
+
+func _deck_repair(at: Vector3, mirrored: bool) -> void:
+	# Flush cross-grain repairs interrupt the long seams without placing obstacles in combat lanes.
+	var lengths := [2.20,2.65,2.54,2.82,2.42,2.18]
+	var offsets := [-0.15,0.04,-0.08,0.11,0.05,-0.12]
+	for row in range(lengths.size()):
+		var length: float = lengths[row]
+		var center: Vector3 = at+Vector3(offsets[row]*(-1.0 if mirrored else 1.0),0,-0.67+row*0.27)
+		_box(center+Vector3(0,0.073,0),Vector3(length+0.025,0.008,0.245),"black")
+		var split := length*(0.35+(row%3)*0.11)
+		var cursor := -length*0.5
+		for piece in range(2):
+			var piece_length := split if piece==0 else length-split
+			var point: Vector3 = center+Vector3(cursor+piece_length*0.5,0.063,0)
+			var yaw := PI*0.5+(row-2.5)*0.003
+			var variant := posmod(row+piece+(1 if mirrored else 0),3)
+			_deck_batches[variant].append(Transform3D(Basis(Vector3.UP,yaw).scaled_local(Vector3(0.234,0.045,piece_length-0.024)),point))
+			for dx in [-piece_length*0.5+0.085,piece_length*0.5-0.085]:
+				_cylinder(point+Vector3(dx,0.026,0),0.018,0.006,"agediron")
+			cursor += piece_length
+	# A few paired loading gouges lead into each repair; the rest of the deck stays quiet.
+	for i in range(3):
+		_box(at+Vector3(-0.7+i*0.12,0.077,0.87+i*0.06),Vector3(0.025,0.004,0.55+i*0.12),"endwood",false,Vector3(0,-0.08+i*0.06,0))
 
 func _boundaries() -> void:
 	_collision(Vector3(-10.8,0.7,0),Vector3(0.6,1.4,14))
@@ -868,8 +883,27 @@ func _cargo_ship(at: Vector3) -> void:
 	_box(at+Vector3(-0.3,1.175,0),Vector3(3.9,1.30,2.1),"darkwood")
 	for x in [-1.7,-0.7,0.3,1.3]:
 		_beveled(at+Vector3(x,1.175,1.08),Vector3(0.13,1.30,0.13),"trimwood")
-		_box(at+Vector3(x+0.3,1.25,1.10),Vector3(0.45,0.65,0.04),"window")
-		for y in [1.0,1.2,1.4]: _box(at+Vector3(x+0.3,y,1.14),Vector3(0.48,0.035,0.04),"darkwood")
+	# Two occupied bays, a half-shutter and one dark cabin break the four identical light boxes.
+	var panes := [Vector4(-1.42,1.25,0.46,0.65),Vector4(-0.42,1.25,0.48,0.72),Vector4(0.58,1.26,0.46,0.58),Vector4(1.47,1.20,0.26,0.60)]
+	var pane_materials := ["window_dim","window","window","window_unlit"]
+	for i in range(panes.size()):
+		var pane: Vector4 = panes[i]
+		_box(at+Vector3(pane.x,pane.y,1.085),Vector3(pane.z+0.13,pane.w+0.12,0.045),"black")
+		_box(at+Vector3(pane.x,pane.y,1.12),Vector3(pane.z,pane.w,0.018),pane_materials[i])
+		for dx in [-pane.z*0.5-0.028,pane.z*0.5+0.028]:
+			_beveled(at+Vector3(pane.x+dx,pane.y,1.15),Vector3(0.045,pane.w+0.12,0.055),"postwood")
+		for dy in [-pane.w*0.5-0.03,pane.w*0.5+0.03]:
+			_beveled(at+Vector3(pane.x,pane.y+dy,1.15),Vector3(pane.z+0.10,0.045,0.055),"postwood")
+		if i in [1,2]:
+			_box(at+Vector3(pane.x-0.025,pane.y,1.145),Vector3(0.018,pane.w,0.025),"darkwood")
+			for dy in ([-0.14,0.08] if i==1 else [-0.10,0.12]):
+				_box(at+Vector3(pane.x,pane.y+dy,1.145),Vector3(pane.z,0.022,0.025),"darkwood")
+		elif i==0:
+			_beveled(at+Vector3(pane.x+pane.z*0.24,pane.y,1.17),Vector3(pane.z*0.54,pane.w*0.98,0.055),"postwood",Vector3(0,0.04,0))
+		else:
+			var shutter_width := pane.z*0.70
+			var angle := 0.75
+			_beveled(at+Vector3(pane.x-pane.z*0.5-shutter_width*0.5*cos(angle),pane.y,1.17+shutter_width*0.5*sin(angle)),Vector3(shutter_width,pane.w,0.045),"postwood",Vector3(0,angle,0))
 	for height in [0.58,1.75]: _beveled(at+Vector3(-0.3,height,1.105),Vector3(3.95,0.12,0.11),"postwood")
 	for x in [-2.15,1.65]:
 		for y in [0.75,1.06,1.62]: _beveled(at+Vector3(x,y,0),Vector3(0.12,0.14,2.12),"postwood")
@@ -1038,9 +1072,14 @@ func _detail_materials() -> void:
 	roof.set_shader_parameter("base_tint",Vector3(0.016,0.026,0.034))
 	_materials["tile"] = roof
 	_materials["tileedge"] = _materials["tileedge1"]
-	var window := ShaderMaterial.new()
-	window.shader = load("res://assets/environment/waterfront_window.gdshader")
-	_materials["window"] = window
+	for entry: String in ["window","window_dim","window_unlit"]:
+		var window := ShaderMaterial.new()
+		window.shader = load("res://assets/environment/waterfront_window.gdshader")
+		window.set_shader_parameter("light_strength",1.0 if entry=="window" else (0.36 if entry=="window_dim" else 0.045))
+		_materials[entry] = window
+	var paper := ShaderMaterial.new()
+	paper.shader = load("res://assets/environment/waterfront_lantern.gdshader")
+	_materials["paper"] = paper
 
 func _beveled(at: Vector3, size: Vector3, material: String, rotation: Vector3 = Vector3.ZERO) -> void:
 	_beveled_basis(at,size,material,Basis.from_euler(rotation))

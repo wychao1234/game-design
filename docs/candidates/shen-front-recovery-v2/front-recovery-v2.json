@@ -1,0 +1,44 @@
+{
+  "status": "Source archive: independently approved local dynamic front2 repair, copied unchanged into production assets; whole-game art acceptance still not passed",
+  "date": "2026-10-21",
+  "generation_tool": "built-in image_gen",
+  "source_output": "exec-8e52801b-2e84-4be5-be57-614a21683b87.png",
+  "sha256": "faf497af69be46f2a6067326b4d376e9047b7a5f3dde30e31edcfc5415000f7e",
+  "bytes": 709434,
+  "image_size": [
+    1314,
+    1197
+  ],
+  "mode": "RGBA",
+  "reference_images": [
+    "ember-town/assets/characters/shen_attack.png",
+    "shen_attack_recovery_overrides.png"
+  ],
+  "purpose": "Repair rejected front recovery face/hair/shoulder identity while retaining forward lunge. Preserve all existing production frames until independent dynamic acceptance.",
+  "independent_static_review": "Through root: shoulder sleeve restored and identity broadly consistent; warmer palette and smoothness remain dynamic-review risks.",
+  "calibration": {
+    "body_height_pixels": 965,
+    "bbox_alpha_gt80": [
+      330,
+      137,
+      1108,
+      1102
+    ],
+    "foot_x": 418.0,
+    "foot_y": 1102,
+    "foot_support_bbox": [
+      351,
+      1086,
+      134,
+      16
+    ],
+    "normalization": "One uniform entire-source nearest269/965; no per-pose scale or full-sprite translation compensation."
+  },
+  "isolated_fixture": "ember-town/tests/front_candidate_visual_review.gd",
+  "runtime_mapping": "Same SHA copied to ember-town/assets/characters/shen_attack_front_recovery_v2.png with independent metadata restricted to frame2; old right source remains frame14 only.",
+  "independent_dynamic_review": {
+    "date": "2026-10-21",
+    "scope": "Fixed-angle normal-speed front basic attack; face/hair/shoulder-cloth/belt continuity through native frames13-17 locally passed, no round bare shoulder/upper-body replacement.",
+    "limits": "Legs partly obscured by enemy: do not claim full foot-motion acceptance. Warm palette/smoothness still subject to future overall art refinement."
+  }
+}

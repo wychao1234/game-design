@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "image": "shen_attack_front_recovery_v2.png",
+  "sha256": "faf497af69be46f2a6067326b4d376e9047b7a5f3dde30e31edcfc5415000f7e",
+  "image_size": [
+    1314,
+    1197
+  ],
+  "status": "front2 locally accepted in independent normal-speed GPU review; full animation and whole-game visual acceptance are separate",
+  "global_body_height_pixels": 965.0,
+  "calibration_method": "Actual head-to-boot body965px, full source uniformly nearest-normalized269/965 to366x334, identical to the isolated GPU fixture. Foot support is alpha>80 bottom16px boot band; do not change the whole-sprite position or per-frame pixel_size.",
+  "replacement_indices": [
+    2
+  ],
+  "frames": [
+    {
+      "index": 2,
+      "direction": "front",
+      "stage": "recovery",
+      "region": [
+        0,
+        0,
+        1314,
+        1197
+      ],
+      "foot_x": 418.0,
+      "foot_y": 1102,
+      "body_height_pixels": 965,
+      "foot_support_bbox": [
+        351,
+        1086,
+        134,
+        16
+      ]
+    }
+  ],
+  "generation_tool": "built-in image_gen",
+  "source_output": "exec-8e52801b-2e84-4be5-be57-614a21683b87.png",
+  "prompt_archive": "docs/candidates/shen-front-recovery-v2/PROMPT.txt",
+  "independent_dynamic_review": {
+    "date": "2026-10-21",
+    "scope": "Fixed-angle normal-speed front basic attack; face/hair/shoulder-cloth/belt continuity through native frames13-17 locally passed, no round bare shoulder/upper-body replacement.",
+    "limits": "Legs partly obscured by enemy: do not claim full foot-motion acceptance. Warm palette/smoothness still subject to future overall art refinement."
+  },
+  "production_unchanged": {
+    "shen_attack.png": "fb6e19cf840e9851cccb412d0589d4ddc1f59de937353baa7e751f99d5c5d8fe",
+    "shen_attack.json": "57470a5fda2e68895f8f5ad887b14a95c6090b85381ee3cfbe38d715ec6a8959"
+  },
+  "excluded_sources": [
+    "Old front2 within shen_attack_recovery_overrides.png remains rejected; that source may map only right14."
+  ]
+}

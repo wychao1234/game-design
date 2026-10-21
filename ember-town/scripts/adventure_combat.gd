@@ -589,6 +589,71 @@ func _prepare_shen_attack_atlas(png_path: String = "res://assets/characters/shen
 	_shen_attack_frames = textures
 	_shen_attack_offsets = offsets
 	_shen_attack_pixel_size = pixel_size
+	_apply_shen_recovery_overrides(metadata)
+	_apply_shen_recovery_overrides(metadata,"res://assets/characters/shen_attack_front_recovery_v2.json")
+	return true
+
+# Each approved source may replace only its independently reviewed recovery.
+func _apply_shen_recovery_overrides(base_metadata: Dictionary, metadata_path: String = "res://assets/characters/shen_attack_recovery_overrides.json") -> bool:
+	if _shen_attack_frames.size()!=16 or not FileAccess.file_exists(metadata_path): return false
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(metadata_path))
+	if not parsed is Dictionary: return false
+	var metadata: Dictionary = parsed as Dictionary
+	if not _pose_number(metadata.get("schema_version")) or float(metadata["schema_version"])!=1.0: return false
+	if not metadata.get("image") is String: return false
+	var allowed_index: int = int({"shen_attack_recovery_overrides.png":14,"shen_attack_front_recovery_v2.png":2}.get(str(metadata["image"]),-1))
+	if allowed_index<0: return false
+	var source_height: Variant = metadata.get("global_body_height_pixels")
+	if not _pose_number(source_height) or float(source_height)<=0.0: return false
+	var raw_frames: Variant = metadata.get("frames")
+	if not raw_frames is Array or (raw_frames as Array).size()!=1: return false
+	var source_path: String = "res://assets/characters/"+str(metadata["image"])
+	if not ResourceLoader.exists(source_path): return false
+	var source_texture: Texture2D = load(source_path) as Texture2D
+	if source_texture==null: return false
+	var image: Image = source_texture.get_image()
+	if image==null or image.is_empty(): return false
+	var scale: float = float(base_metadata["global_body_height_pixels"])/float(source_height)
+	if not is_finite(scale) or scale<0.25 or scale>4.0: return false
+	var source_size: Vector2i = image.get_size()
+	var normalized_size: Vector2i = Vector2i(maxi(1,roundi(source_size.x*scale)),maxi(1,roundi(source_size.y*scale)))
+	image.resize(normalized_size.x,normalized_size.y,Image.INTERPOLATE_NEAREST)
+	var ratio: Vector2 = Vector2(normalized_size)/Vector2(source_size)
+	var normalized: ImageTexture = ImageTexture.create_from_image(image)
+	var replacements: Dictionary = {}
+	for raw: Variant in raw_frames:
+		if not raw is Dictionary: return false
+		var frame: Dictionary = raw as Dictionary
+		if not _pose_number(frame.get("index")) or float(frame["index"])!=float(allowed_index): return false
+		var index: int = int(frame["index"])
+		if replacements.has(index): return false
+		var raw_region: Variant = frame.get("region")
+		if not raw_region is Array or (raw_region as Array).size()!=4: return false
+		var region: Array = raw_region as Array
+		for value: Variant in region:
+			if not _pose_number(value) or float(value)!=floorf(float(value)): return false
+		var rect: Rect2 = Rect2(float(region[0]),float(region[1]),float(region[2]),float(region[3]))
+		if rect.position.x<0.0 or rect.position.y<0.0 or rect.size.x<=0.0 or rect.size.y<=0.0: return false
+		if rect.end.x>source_size.x or rect.end.y>source_size.y: return false
+		for key: String in ["foot_x","foot_y"]:
+			if not _pose_number(frame.get(key)): return false
+		if float(frame["foot_x"])<0.0 or float(frame["foot_x"])>rect.size.x or float(frame["foot_y"])<0.0 or float(frame["foot_y"])>rect.size.y: return false
+		var normalized_rect: Rect2 = Rect2(rect.position*ratio,rect.size*ratio)
+		var atlas: AtlasTexture = AtlasTexture.new()
+		atlas.atlas = normalized
+		atlas.region = normalized_rect
+		atlas.filter_clip = true
+		var horizontal_bias: float = 0.0
+		if base_metadata.has("reference_walk_support_x_by_row"):
+			var row: int = index/4
+			var walk_offset: Vector2 = (_role_offsets["shen"] as Array)[row*4]
+			horizontal_bias = (float((base_metadata["reference_walk_support_x_by_row"] as Array)[row])+walk_offset.x)*float(_role_sizes["shen"])/_shen_attack_pixel_size
+		var offset: Vector2 = Vector2(-float(frame["foot_x"])*ratio.x+horizontal_bias,float(frame["foot_y"])*ratio.y-normalized_rect.size.y)
+		replacements[index] = {"texture":atlas,"offset":offset}
+	# Malformed optional metadata leaves the current cache unchanged.
+	for index: int in replacements:
+		_shen_attack_frames[index] = replacements[index]["texture"]
+		_shen_attack_offsets[index] = replacements[index]["offset"]
 	return true
 
 func _pose_number(value: Variant) -> bool:
@@ -634,6 +699,11 @@ func _arc_feedback(color: Color, radius: float) -> void:
 	var authored_sword: bool = active_member()=="shen" and _shen_pose_time>0.0
 	trail.position = hero.position+Vector3.UP*(1.5 if authored_sword else 0.85)
 	trail.rotation.y = atan2(aim.x,aim.z)
+	var back_q: bool = authored_sword and _shen_pose_row==1 and is_equal_approx(radius,2.7)
+	if back_q:
+		# The back pose cuts up toward screen-right, rather than sweeping a flat roof.
+		trail.position.y = hero.position.y+1.10
+		trail.rotation.z = deg_to_rad(-28.0)
 	add_child(trail)
 	# One source light belongs to the same short-lived trail, never to a timer
 	# that can outlive its attack. It affects wet scenery, not unshaded actors.
@@ -655,6 +725,7 @@ func _arc_feedback(color: Color, radius: float) -> void:
 		var width: float = float([0.34,0.17,0.052][layer])
 		var tint: Color = [outer,edge,core][layer]
 		var node: MeshInstance3D = _sword_crescent(radius,width,tint)
+		if back_q: node.scale.x = 0.74
 		node.position.y = float(layer)*0.012
 		trail.add_child(node)
 	var fragments: MeshInstance3D = MeshInstance3D.new()

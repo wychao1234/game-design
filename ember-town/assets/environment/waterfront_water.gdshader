@@ -20,8 +20,11 @@ void fragment(){
  float fine=noise(vec2(across_water*5.4,along_water*15.3+TIME*0.28)*detail_scale);
  float broken_wave=sin(along_water*17.0+noise(p*0.8)*5.0+TIME*0.86);
  float glints=smoothstep(0.32,0.86,broken_wave)*smoothstep(0.30,0.74,fine);
+ // Sub-pixel ripples resolve to their average, not a distant field of flashing dots.
+ float ripple_visibility=1.0-smoothstep(0.65,1.6,fwidth(along_water)*17.0);
+ glints=mix(0.22,glints,ripple_visibility);
  float breakup=smoothstep(0.29,0.64,noise(vec2(across_water*11.3,along_water*22.7+TIME*0.12)));
- float sky_fragments=smoothstep(0.55,0.77,fine)*smoothstep(0.43,0.74,noise(p*0.65+vec2(2.1,-TIME*0.025)))*breakup;
+ float sky_fragments=smoothstep(0.55,0.77,fine)*smoothstep(0.43,0.74,noise(p*0.65+vec2(2.1,-TIME*0.025)))*breakup*ripple_visibility;
  float warm=0.0;
  for(int i=0;i<16;i++){
   if(i>=lamp_count)break;
@@ -36,9 +39,12 @@ void fragment(){
  }
  ALBEDO=mix(vec3(0.008,0.021,0.031),vec3(0.016,0.039,0.055),swell);
  EMISSION=vec3(0.84,0.31,0.068)*min(warm,1.6)*0.55+vec3(0.020,0.052,0.082)*sky_fragments;
- ROUGHNESS=0.16+swell*0.12;
+ ROUGHNESS=0.22+swell*0.12;
  METALLIC=0.0;
- SPECULAR=0.55;
- NORMAL_MAP=vec3(0.5+sin(across_water*2.6+TIME*0.37+swell*2.1)*0.032,0.5+ripple*0.045+(fine-0.5)*0.050,1.0);
- NORMAL_MAP_DEPTH=0.65;
+ SPECULAR=0.48;
+ // Directional wave faces split lamp reflections into bands without random normal-map speckle.
+ float broad_wave=sin(along_water*1.9+sin(across_water*0.46)*1.2+TIME*0.38);
+ float ripple_band=smoothstep(0.56,0.80,noise(p*0.28+vec2(TIME*0.018,0.0)));
+ NORMAL_MAP=vec3(0.5+sin(across_water*0.85+TIME*0.24+swell*2.1)*0.020,0.5+broad_wave*0.012+ripple*0.035*(0.5+0.5*ripple_band)*ripple_visibility,1.0);
+ NORMAL_MAP_DEPTH=0.48;
 }
